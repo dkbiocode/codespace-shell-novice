@@ -33,25 +33,21 @@ a simple text format that specifies the type and position of each atom in the mo
 ~~~
 $ ls
 ~~~
-{: .language-bash}
 
 ~~~
 cubane.pdb    methane.pdb    pentane.pdb
 ethane.pdb    octane.pdb     propane.pdb
 ~~~
-{: .output}
 
 Let's run an example command:
 
 ~~~
 $ wc cubane.pdb
 ~~~
-{: .language-bash}
 
 ~~~
 20  156 1158 cubane.pdb
 ~~~
-{: .output}
 
 `wc` is the 'word count' command:
 it counts the number of lines, words, and characters in files (returning the values
@@ -63,7 +59,6 @@ so the shell turns `*.pdb` into a list of all `.pdb` files in the current direct
 ~~~
 $ wc *.pdb
 ~~~
-{: .language-bash}
 
 ~~~
   20  156  1158  cubane.pdb
@@ -74,7 +69,6 @@ $ wc *.pdb
   15  111  825   propane.pdb
  107  819  6081  total
 ~~~
-{: .output}
 
 Note that `wc *.pdb` also shows the total number of all lines in the last line of the output.
 
@@ -84,7 +78,6 @@ the output shows only the number of lines per file:
 ~~~
 $ wc -l *.pdb
 ~~~
-{: .language-bash}
 
 ~~~
   20  cubane.pdb
@@ -95,7 +88,6 @@ $ wc -l *.pdb
   15  propane.pdb
  107  total
 ~~~
-{: .output}
 
 The `-m` and `-w` options can also be used with the `wc` command to show
 only the number of characters or the number of words, respectively.
@@ -119,7 +111,6 @@ only the number of characters or the number of words, respectively.
 > If you make this kind of mistake, you can escape out of this state by
 > holding down the control key (<kbd>Ctrl</kbd>) and pressing the letter
 > <kbd>C</kbd> once: <kbd>Ctrl</kbd>+<kbd>C</kbd>. Then release both keys.
-{: .callout}
 
 
 ## Capturing output from commands
@@ -132,7 +123,6 @@ Our first step toward a solution is to run the command:
 ~~~
 $ wc -l *.pdb > lengths.txt
 ~~~
-{: .language-bash}
 
 The greater than symbol, `>`, tells the shell to **redirect** the command's output to a
 file instead of printing it to the screen. This command prints no screen output, because
@@ -146,12 +136,10 @@ Thus, **redirect** commands require caution.
 ~~~
 $ ls lengths.txt
 ~~~
-{: .language-bash}
 
 ~~~
 lengths.txt
 ~~~
-{: .output}
 
 We can now send the content of `lengths.txt` to the screen using `cat lengths.txt`.
 The `cat` command gets its name from 'concatenate' i.e. join together,
@@ -162,7 +150,6 @@ so `cat` just shows us what it contains:
 ~~~
 $ cat lengths.txt
 ~~~
-{: .language-bash}
 
 ~~~
   20  cubane.pdb
@@ -173,7 +160,6 @@ $ cat lengths.txt
   15  propane.pdb
  107  total
 ~~~
-{: .output}
 
 > ## Output Page by Page
 >
@@ -183,7 +169,6 @@ $ cat lengths.txt
 > This displays a screenful of the file, and then stops.
 > You can go forward one screenful by pressing the spacebar,
 > or back one by pressing `b`.  Press `q` to quit.
-{: .callout}
 
 
 ## Filtering output
@@ -231,7 +216,6 @@ But first we'll do an exercise to learn a little about the sort command:
 > > ## Solution
 > > The `-n` option specifies a numerical rather than an alphanumerical sort.
 > {: .solution}
-{: .challenge}
 
 We will also use the `-n` option to specify that the sort is
 numerical instead of alphanumerical.
@@ -241,7 +225,6 @@ instead, it sends the sorted result to the screen:
 ~~~
 $ sort -n lengths.txt
 ~~~
-{: .language-bash}
 
 ~~~
   9  methane.pdb
@@ -252,7 +235,6 @@ $ sort -n lengths.txt
  30  octane.pdb
 107  total
 ~~~
-{: .output}
 
 
 We can put the sorted list of lines in another temporary file called `sorted-lengths.txt`
@@ -265,12 +247,10 @@ we can run another command called `head` to get the first few lines in `sorted-l
 $ sort -n lengths.txt > sorted-lengths.txt
 $ head -n 1 sorted-lengths.txt
 ~~~
-{: .language-bash}
 
 ~~~
   9  methane.pdb
 ~~~
-{: .output}
 
 Using `-n 1` with `head` tells it that
 we only want the first line of the file;
@@ -293,7 +273,6 @@ the output of `head` must be the file with the fewest lines.
 > Doing something like this may give you
 > incorrect results and/or delete
 > the contents of `lengths.txt`.
-{: .callout}
 
 > ## What Does `>>` Mean?
 >
@@ -336,7 +315,6 @@ the output of `head` must be the file with the fewest lines.
 > > but appends the string to the file if it already exists
 > > (i.e. when we run it for the second time).
 > {: .solution}
-{: .challenge}
 
 > ## Appending Data
 >
@@ -365,7 +343,6 @@ the output of `head` must be the file with the fewest lines.
 > > For option 4 to be correct we would have to pipe the output of `head` into `tail -n 2`
 > >  by doing `head -n 3 animals.csv | tail -n 2 > animals-subset.csv`
 > {: .solution}
-{: .challenge}
 
 
 ## Passing output to another command
@@ -379,12 +356,10 @@ We can make it easier to understand by running `sort` and `head` together:
 ~~~
 $ sort -n lengths.txt | head -n 1
 ~~~
-{: .language-bash}
 
 ~~~
   9  methane.pdb
 ~~~
-{: .output}
 
 The vertical bar, `|`, between the two commands is called a **pipe**.
 It tells the shell that we want to use
@@ -404,7 +379,6 @@ We'll start by using a pipe to send the output of `wc` to `sort`:
 ~~~
 $ wc -l *.pdb | sort -n
 ~~~
-{: .language-bash}
 
 ~~~
    9 methane.pdb
@@ -415,19 +389,16 @@ $ wc -l *.pdb | sort -n
   30 octane.pdb
  107 total
 ~~~
-{: .output}
 
 We can then send that output through another pipe, to `head`, so that the full pipeline becomes:
 
 ~~~
 $ wc -l *.pdb | sort -n | head -n 1
 ~~~
-{: .language-bash}
 
 ~~~
    9  methane.pdb
 ~~~
-{: .output}
 
 This is exactly like a mathematician nesting functions like *log(3x)*
 and saying 'the log of three times *x*'.
@@ -461,7 +432,6 @@ the "sort" command is the input to the "head" command and the output of the
 > > `>` is used to redirect standard output to a file.
 > > Try it in the `shell-lesson-data/exercise-data/alkanes` directory!
 > {: .solution}
-{: .challenge}
 
 
 ## Tools designed to work together
@@ -525,7 +495,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > ```
 > > {: .source}
 > {: .solution}
-{: .challenge}
 
 > ## Pipe Construction
 >
@@ -566,7 +535,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > ```
 > > {: .language-bash}
 > {: .solution}
-{: .challenge}
 
 > ## Which Pipe?
 >
@@ -599,7 +567,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > the pipelines (make sure you are in the `shell-lesson-data/exercise-data/animal-counts`
 > > directory).
 > {: .solution}
-{: .challenge}
 
 ## Nelle's Pipeline: Checking Files
 
@@ -611,7 +578,6 @@ As a quick check, starting from the `shell-lesson-data` directory, Nelle types:
 $ cd north-pacific-gyre
 $ wc -l *.txt
 ~~~
-{: .language-bash}
 
 The output is 18 lines that look like this:
 
@@ -624,14 +590,12 @@ The output is 18 lines that look like this:
 300 NENE01812A.txt
 ... ...
 ~~~
-{: .output}
 
 Now she types this:
 
 ~~~
 $ wc -l *.txt | sort -n | head -n 5
 ~~~
-{: .language-bash}
 
 ~~~
  240 NENE02018B.txt
@@ -640,7 +604,6 @@ $ wc -l *.txt | sort -n | head -n 5
  300 NENE01736A.txt
  300 NENE01751A.txt
 ~~~
-{: .output}
 
 Whoops: one of the files is 60 lines shorter than the others.
 When she goes back and checks it,
@@ -653,7 +616,6 @@ she checks to see if any files have too much data:
 ~~~
 $ wc -l *.txt | sort -n | tail -n 5
 ~~~
-{: .language-bash}
 
 ~~~
  300 NENE02040B.txt
@@ -662,7 +624,6 @@ $ wc -l *.txt | sort -n | tail -n 5
  300 NENE02043B.txt
 5040 total
 ~~~
-{: .output}
 
 Those numbers look good --- but what's that 'Z' doing there in the third-to-last line?
 All of her samples should be marked 'A' or 'B';
@@ -673,12 +634,10 @@ To find others like it, she does this:
 ~~~
 $ ls *Z.txt
 ~~~
-{: .language-bash}
 
 ~~~
 NENE01971Z.txt    NENE02040Z.txt
 ~~~
-{: .output}
 
 Sure enough,
 when she checks the log on her laptop,
@@ -713,7 +672,6 @@ so instead, she'll have to be careful later on to select files using the wildcar
 > > 4. The shell would expand `*.*` to match all files with any extension,
 > > so this command would delete all files
 > {: .solution}
-{: .challenge}
 
 ---
 

@@ -42,7 +42,6 @@ Let's look at the files:
 ```
 $ head -n 5 basilisk.dat minotaur.dat unicorn.dat
 ```
-{: .language-bash}
 
 We would like to print out the classification for each species, which is given on the second
 line of each file.
@@ -56,7 +55,6 @@ do
     operation_using $thing    # Indentation within the loop is not required, but aids legibility
 done
 ```
-{: .language-bash}
 
 and we can apply this to our example like this:
 
@@ -67,7 +65,6 @@ $ for filename in basilisk.dat minotaur.dat unicorn.dat
 >     head -n 2 $filename | tail -n 1
 > done
 ```
-{: .language-bash}
 
 ```
 basilisk.dat
@@ -77,7 +74,6 @@ CLASSIFICATION: bos hominus
 unicorn.dat
 CLASSIFICATION: equus monoceros
 ```
-{: .output}
 
 
 > ## Follow the Prompt
@@ -86,7 +82,6 @@ CLASSIFICATION: equus monoceros
 > typing in our loop. The second prompt, `>`, is different to remind
 > us that we haven't finished typing a complete command yet. A semicolon, `;`,
 > can be used to separate two commands written on a single line.
-{: .callout}
 
 When the shell sees the keyword `for`,
 it knows to repeat a command (or group of commands) once for each item in a list.
@@ -131,7 +126,6 @@ Since the list was only three items, the shell exits the `for` loop.
 >
 > If *you* type `>` or `$` yourself, it is an instruction from you that
 > the shell should redirect output or get the value of a variable.
-{: .callout}
 
 When using variables it is also
 possible to put the names into curly braces to clearly delimit the variable
@@ -149,7 +143,6 @@ $ for x in basilisk.dat minotaur.dat unicorn.dat
 >     head -n 2 $x | tail -n 1
 > done
 ~~~
-{: .language-bash}
 
 or:
 
@@ -159,7 +152,6 @@ $ for temperature in basilisk.dat minotaur.dat unicorn.dat
 >     head -n 2 $temperature | tail -n 1
 > done
 ~~~
-{: .language-bash}
 
 it would work exactly the same way.
 *Don't do this.*
@@ -202,7 +194,6 @@ or a subset of data.
 > > ```
 > > {: .output}
 > {: .solution}
-{: .challenge}
 
 > ## Variables in Loops
 >
@@ -275,7 +266,6 @@ or a subset of data.
 > > ```
 > > {: .output}
 > {: .solution}
-{: .challenge}
 
 > ## Limiting Sets of Files
 >
@@ -320,7 +310,6 @@ or a subset of data.
 > > 4 is the correct answer. `*` matches zero or more characters, so a file name with zero or more
 > > characters before a letter c and zero or more characters after the letter c will be matched.
 > {: .solution}
-{: .challenge}
 
 > ## Saving to a File in a Loop - Part One
 >
@@ -349,7 +338,6 @@ or a subset of data.
 > > `alkanes.pdb`
 > > is the text from the `propane.pdb` file.
 > {: .solution}
-{: .challenge}
 
 > ## Saving to a File in a Loop - Part Two
 >
@@ -377,7 +365,6 @@ or a subset of data.
 > > output from a command.
 > > Given the output from the `cat` command has been redirected, nothing is printed to the screen.
 > {: .solution}
-{: .challenge}
 
 Let's continue with our example in the `shell-lesson-data/exercise-data/creatures` directory.
 Here's a slightly more complicated loop:
@@ -389,7 +376,6 @@ $ for filename in *.dat
 >     head -n 100 $filename | tail -n 20
 > done
 ~~~
-{: .language-bash}
 
 The shell starts by expanding `*.dat` to create the list of files it will process.
 The **loop body**
@@ -400,14 +386,12 @@ For example:
 ~~~
 $ echo hello there
 ~~~
-{: .language-bash}
 
 prints:
 
 ~~~
 hello there
 ~~~
-{: .output}
 
 In this case,
 since the shell expands `$filename` to be the name of a file,
@@ -421,7 +405,6 @@ $ for filename in *.dat
 >     head -n 100 $filename | tail -n 20
 > done
 ~~~
-{: .language-bash}
 
 because then the first time through the loop,
 when `$filename` expanded to `basilisk.dat`, the shell would try to run `basilisk.dat` as
@@ -481,7 +464,6 @@ from whatever file is being processed
 > ...
 > ~~~
 > {: .output}
-{: .callout}
 
 We would like to modify each of the files in `shell-lesson-data/exercise-data/creatures`, 
 but also save a version of the original files. We want to copy the original files to new
@@ -490,21 +472,18 @@ files named `original-basilisk.dat` and `original-unicorn.dat`, for example. We 
 ~~~
 $ cp *.dat original-*.dat
 ~~~
-{: .language-bash}
 
 because that would expand to:
 
 ~~~
 $ cp basilisk.dat minotaur.dat unicorn.dat original-*.dat
 ~~~
-{: .language-bash}
 
 This wouldn't back up our files, instead we get an error:
 
 ~~~
 cp: target `original-*.dat' is not a directory
 ~~~
-{: .error}
 
 This problem arises when `cp` receives more than two inputs. When this happens, it expects the
 last input to be a directory where it can copy all the files it was passed. Since there is
@@ -517,7 +496,6 @@ $ for filename in *.dat
 >     cp $filename original-$filename
 > done
 ~~~
-{: .language-bash}
 
 This loop runs the `cp` command once for each filename.
 The first time,
@@ -527,21 +505,18 @@ the shell executes:
 ~~~
 cp basilisk.dat original-basilisk.dat
 ~~~
-{: .language-bash}
 
 The second time, the command is:
 
 ~~~
 cp minotaur.dat original-minotaur.dat
 ~~~
-{: .language-bash}
 
 The third and last time, the command is:
 
 ~~~
 cp unicorn.dat original-unicorn.dat
 ~~~
-{: .language-bash}
 
 Since the `cp` command does not normally produce any output, it's hard to check
 that the loop is working correctly. However, we learned earlier how to print strings
@@ -584,7 +559,6 @@ $ for datafile in NENE*A.txt NENE*B.txt
 >     echo $datafile
 > done
 ~~~
-{: .language-bash}
 
 ~~~
 NENE01729A.txt
@@ -594,7 +568,6 @@ NENE01736A.txt
 NENE02043A.txt
 NENE02043B.txt
 ~~~
-{: .output}
 
 Her next step is to decide
 what to call the files that the `goostats.sh` analysis program will create.
@@ -607,7 +580,6 @@ $ for datafile in NENE*A.txt NENE*B.txt
 >     echo $datafile stats-$datafile
 > done
 ~~~
-{: .language-bash}
 
 ~~~
 NENE01729A.txt stats-NENE01729A.txt
@@ -617,7 +589,6 @@ NENE01736A.txt stats-NENE01736A.txt
 NENE02043A.txt stats-NENE02043A.txt
 NENE02043B.txt stats-NENE02043B.txt
 ~~~
-{: .output}
 
 She hasn't actually run `goostats.sh` yet,
 but now she's sure she can select the right files and generate the right output filenames.
@@ -634,7 +605,6 @@ the shell redisplays the whole loop on one line
 ~~~
 $ for datafile in NENE*A.txt NENE*B.txt; do echo $datafile stats-$datafile; done
 ~~~
-{: .language-bash}
 
 Using the <kbd>←</kbd>,
 Nelle navigates to the `echo` command and changes it to `bash goostats.sh`:
@@ -642,7 +612,6 @@ Nelle navigates to the `echo` command and changes it to `bash goostats.sh`:
 ~~~
 $ for datafile in NENE*A.txt NENE*B.txt; do bash goostats.sh $datafile stats-$datafile; done
 ~~~
-{: .language-bash}
 
 When she presses <kbd>Enter</kbd>,
 the shell runs the modified command.
@@ -657,13 +626,11 @@ and edits it to read:
 $ for datafile in NENE*A.txt NENE*B.txt; do echo $datafile;
 bash goostats.sh $datafile stats-$datafile; done
 ~~~
-{: .language-bash}
 
 > ## Beginning and End
 >
 > We can move to the beginning of a line in the shell by typing <kbd>Ctrl</kbd>+<kbd>A</kbd>
 > and to the end using <kbd>Ctrl</kbd>+<kbd>E</kbd>.
-{: .callout}
 
 When she runs her program now,
 it produces one line of output every five seconds or so:
@@ -674,7 +641,6 @@ NENE01729B.txt
 NENE01736A.txt
 ...
 ~~~
-{: .output}
 
 1518 times 5 seconds,
 divided by 60,
@@ -710,7 +676,6 @@ so she decides to get some coffee and catch up on her reading.
 >
 > then she can re-run `goostats.sh` on the files simply by typing
 > `!459`.
-{: .callout}
 
 > ## Other History Commands
 >
@@ -728,7 +693,6 @@ so she decides to get some coffee and catch up on her reading.
 > `bash goostats.sh NENE01729B.txt stats-NENE01729B.txt`, you can type
 > `less !$` to look at the file `stats-NENE01729B.txt`, which is
 > quicker than doing <kbd>↑</kbd> and editing the command-line.
-{: .callout}
 
 > ## Doing a Dry Run
 >
@@ -783,7 +747,6 @@ so she decides to get some coffee and catch up on her reading.
 > > Try both versions for yourself to see the output! Be sure to open the
 > > `all.pdb` file to view its contents.
 > {: .solution}
-{: .challenge}
 
 > ## Nested Loops
 >
@@ -810,7 +773,6 @@ so she decides to get some coffee and catch up on her reading.
 > >
 > > Try running the code for yourself to see which directories are created!
 > {: .solution}
-{: .challenge}
 
 ---
 

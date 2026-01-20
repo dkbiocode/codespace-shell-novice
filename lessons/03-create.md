@@ -36,28 +36,23 @@ which we can check using:
 ~~~
 $ pwd
 ~~~
-{: .language-bash}
 
 ~~~
 /workspaces/codespace-shell-novice/shell-lesson-data
 ~~~
-{: .output}
 
 Next we'll move to the `exercise-data/writing` directory and see what it contains:
 ~~~
 $ cd exercise-data/writing/
 ~~~
-{:  .language-bash}
 
 ~~~
 $ ls -F
 ~~~
-{: .language-bash}
 
 ~~~
 haiku.txt  LittleWomen.txt
 ~~~
-{: .output}
 
 ### Create a directory
 
@@ -67,7 +62,6 @@ Let's create a new directory called `thesis` using the command `mkdir thesis`
 ~~~
 $ mkdir thesis
 ~~~
-{: .language-bash}
 
 As you might guess from its name,
 `mkdir` means 'make directory'.
@@ -78,19 +72,16 @@ the new directory is created in the current working directory:
 ~~~
 $ ls -F
 ~~~
-{: .language-bash}
 
 ~~~
 haiku.txt  LittleWomen.txt  thesis/
 ~~~
-{: .output}
 
 Since we've just created the `thesis` directory, there's nothing in it yet:
 
 ~~~
 $ ls -F thesis
 ~~~
-{: .language-bash}
 
 Note that `mkdir` is not limited to creating single directories one at a time.
 The `-p` option allows `mkdir` to create a directory with nested subdirectories
@@ -99,7 +90,6 @@ in a single operation:
 ~~~
 $ mkdir -p ../project/data ../project/results
 ~~~
-{: .language-bash}
 
 The `-R` option to the `ls` command will list all nested subdirectories within a directory.
 Let's use `ls -FR` to recursively list the new directory hierarchy we just created in the
@@ -108,7 +98,6 @@ Let's use `ls -FR` to recursively list the new directory hierarchy we just creat
 ~~~
 $ ls -FR ../project
 ~~~
-{: .language-bash}
 
 ~~~
 ../project/:
@@ -118,7 +107,6 @@ data/  results/
 
 ../project/results:
 ~~~
-{: .output}
 
 > ## Two ways of doing the same thing
 > Using the shell to create a directory is no different than using a file explorer.
@@ -126,7 +114,6 @@ data/  results/
 > the `thesis` directory will appear there too.
 > While the shell and the file explorer are two different ways of interacting with the files,
 > the files and directories themselves are the same.
-{: .callout}
 
 > ## Good names for files and directories
 >
@@ -156,7 +143,6 @@ data/  results/
 >
 > If you need to refer to names of files or directories that have spaces
 > or other special characters, you should surround the name in quotes (`""`).
-{: .callout}
 
 ### Create a text file
 Let's change our working directory to `thesis` using `cd`,
@@ -166,7 +152,6 @@ then run a text editor called Nano to create a file called `draft.txt`:
 $ cd thesis
 $ nano draft.txt
 ~~~
-{: .language-bash}
 
 > ## Which Editor?
 >
@@ -190,7 +175,6 @@ $ nano draft.txt
 > your computer's start menu, it may want to save files in your Desktop or
 > Documents directory instead. You can change this by navigating to
 > another directory the first time you 'Save As...'
-{: .callout}
 
 
 Let's type in a few lines of text.
@@ -225,7 +209,6 @@ return to the shell.
 > In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
 > This means that you can use `Control-G` to get help and `Control-O` to save your
 > file.
-{: .callout}
 
 `nano` doesn't leave any output on the screen after it exits,
 but `ls` now shows that we have created a file called `draft.txt`:
@@ -233,12 +216,10 @@ but `ls` now shows that we have created a file called `draft.txt`:
 ~~~
 $ ls
 ~~~
-{: .language-bash}
 
 ~~~
 draft.txt
 ~~~
-{: .output}
 
 > ## Creating Files a Different Way
 >
@@ -286,7 +267,6 @@ draft.txt
 > $ rm my_file.txt
 > ~~~
 > {: .language-bash}
-{: .challenge}
 
 > ## What's In A Name?
 >
@@ -312,7 +292,6 @@ draft.txt
 > program. In this case, if someone double-clicked `whale.mp3` in a file
 > explorer program,the music player will automatically (and erroneously)
 > attempt to open the `whale.mp3` file.
-{: .callout}
 
 ## Moving files and directories
 Returning to the `shell-lesson-data/exercise-data/writing` directory,
@@ -320,7 +299,6 @@ Returning to the `shell-lesson-data/exercise-data/writing` directory,
 ```
 $ cd /workspaces/codespace-shell-novice/shell-lesson-data/exercise-data/writing/thesis
 ```
-{: .language-bash}
 
 In our `thesis` directory we have a file `draft.txt`
 which isn't a particularly informative name,
@@ -330,7 +308,6 @@ which is short for 'move':
 ~~~
 $ mv thesis/draft.txt thesis/quotes.txt
 ~~~
-{: .language-bash}
 
 The first argument tells `mv` what we're 'moving',
 while the second is where it's to go.
@@ -343,12 +320,10 @@ Sure enough,
 ~~~
 $ ls thesis
 ~~~
-{: .language-bash}
 
 ~~~
 quotes.txt
 ~~~
-{: .output}
 
 One must be careful when specifying the target file name, since `mv` will
 silently overwrite any existing file with the same name, which could
@@ -370,7 +345,6 @@ the directory name we use is the special directory name `.` that we mentioned ea
 ~~~
 $ mv thesis/quotes.txt .
 ~~~
-{: .language-bash}
 
 The effect is to move the file from the directory it was in to the current working directory.
 `ls` now shows us that `thesis` is empty:
@@ -378,12 +352,10 @@ The effect is to move the file from the directory it was in to the current worki
 ~~~
 $ ls thesis
 ~~~
-{: .language-bash}
 
 ~~~
 $
 ~~~
-{: .output}
 
 Alternatively, we can confirm the file `quotes.txt` is no longer present in the `thesis` directory
 by explicitly trying to list it:
@@ -391,12 +363,10 @@ by explicitly trying to list it:
 ~~~
 $ ls thesis/quotes.txt
 ~~~
-{: .language-bash}
 
 ```
 ls: cannot access 'thesis/quotes.txt': No such file or directory
 ```
-{: .error}
 
 `ls` with a filename or directory as an argument only lists the requested file or directory.
 If the file given as the argument doesn't exist, the shell returns an error as we saw above.
@@ -405,12 +375,10 @@ We can use this to see that `quotes.txt` is now present in our current directory
 ~~~
 $ ls quotes.txt
 ~~~
-{: .language-bash}
 
 ~~~
 quotes.txt
 ~~~
-{: .output}
 
 > ## Moving Files to a new folder
 >
@@ -442,7 +410,6 @@ quotes.txt
 > > Recall that `..` refers to the parent directory (i.e. one above the current directory)
 > > and that `.` refers to the current directory.
 > {: .solution}
-{: .challenge}
 
 ## Copying files and directories
 
@@ -456,12 +423,10 @@ with two paths as arguments --- like most Unix commands,
 $ cp quotes.txt thesis/quotations.txt
 $ ls quotes.txt thesis/quotations.txt
 ~~~
-{: .language-bash}
 
 ~~~
 quotes.txt   thesis/quotations.txt
 ~~~
-{: .output}
 
 We can also copy a directory and all its contents by using the
 [recursive](https://en.wikipedia.org/wiki/Recursion) option `-r`,
@@ -470,14 +435,12 @@ e.g. to back up a directory:
 ```
 $ cp -r thesis thesis_backup
 ```
-{: .language-bash}
 
 We can check the result by listing the contents of both the `thesis` and `thesis_backup` directory:
 
 ```
 $ ls thesis thesis_backup
 ```
-{: .language-bash}
 
 ```
 thesis:
@@ -486,7 +449,6 @@ quotations.txt
 thesis_backup:
 quotations.txt
 ```
-{: .output}
 
 
 > ## Renaming Files
@@ -515,7 +477,6 @@ quotations.txt
 > {: .solution}
 
 
-{: .challenge}
 
 
 > ## Moving and Copying
@@ -567,7 +528,6 @@ quotations.txt
 > > 3. No, see explanation above.  `proteins.dat` is located at `/Users/jamie/data/recombined`
 > > 4. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
 > {: .solution}
-{: .challenge}
 
 ## Removing files and directories
 
@@ -578,19 +538,16 @@ The Unix command we'll use for this is `rm` (short for 'remove'):
 ~~~
 $ rm quotes.txt
 ~~~
-{: .language-bash}
 
 We can confirm the file has gone using `ls`:
 
 ~~~
 $ ls quotes.txt
 ~~~
-{: .language-bash}
 
 ```
 ls: cannot access 'quotes.txt': No such file or directory
 ```
-{: .error}
 
 > ## Deleting Is Forever
 >
@@ -601,7 +558,6 @@ ls: cannot access 'quotes.txt': No such file or directory
 > recovering deleted files do exist, but there's no guarantee they'll
 > work in any particular situation, since the computer may recycle the
 > file's disk space right away.
-{: .callout}
 
 
 > ## Using `rm` Safely
@@ -620,7 +576,6 @@ ls: cannot access 'quotes.txt': No such file or directory
 > > By using the `-i` option, we have the chance to check that we are deleting only the files
 > > that we want to remove.
 > {: .solution}
-{: .challenge}
 
 
 If we try to remove the `thesis` directory using `rm thesis`,
@@ -629,12 +584,10 @@ we get an error message:
 ~~~
 $ rm thesis
 ~~~
-{: .language-bash}
 
 ~~~
 rm: cannot remove `thesis': Is a directory
 ~~~
-{: .error}
 
 This happens because `rm` by default only works on files, not directories.
 
@@ -644,7 +597,6 @@ recursive option `-r`, and it will do so *without any confirmation prompts*:
 ~~~
 $ rm -r thesis
 ~~~
-{: .language-bash}
 
 Given that there is no way to retrieve files deleted using the shell,
 `rm -r` *should be used with great caution*
@@ -699,7 +651,6 @@ or sets of characters when navigating the Unix file system.
 > > ```
 > > {: .error}
 > {: .solution}
-{: .challenge}
 
 ### Using wildcards for accessing multiple files at once
 
@@ -731,7 +682,6 @@ or sets of characters when navigating the Unix file system.
 > file names matching these expressions, but not the wildcards
 > themselves. It is the shell, not the other programs, that expands
 > the wildcards.
-{: .callout}
 
 > ## List filenames matching a pattern
 >
@@ -764,7 +714,6 @@ or sets of characters when navigating the Unix file system.
 >>
 >> `4.` only shows files starting with `ethane.`.
 > {: .solution}
-{: .challenge}
 
 > ## More on Wildcards
 >
@@ -862,7 +811,6 @@ or sets of characters when navigating the Unix file system.
 > > ```
 > > {: .language-bash}
 > {: .solution}
-{: .challenge}
 
 > ## Organizing Directories and Files
 >
@@ -908,7 +856,6 @@ or sets of characters when navigating the Unix file system.
 > > The shell will expand *.dat to match all .dat files in the current directory.
 > > The `mv` command then moves the list of .dat files to the 'analyzed' directory.
 > {: .solution}
-{: .challenge}
 
 > ## Reproduce a folder structure
 >
@@ -981,7 +928,6 @@ or sets of characters when navigating the Unix file system.
 > > The final set of commands generates the 'raw' and 'processed' directories at the same level
 > > as the 'data' directory.
 > {: .solution}
-{: .challenge}
 
 ---
 
