@@ -472,14 +472,14 @@ $ whoami
 **Output:**
 
 ~~~
-node
+codespace
 ~~~
 
 👀  On an actual Linux server, your user name would be based on your real name, or ID associated with your organization, depending on how it's administered.
 
 **Home directory**
 
-Each user is given a home directory.  Ours is `/home/node`.  To go to your home directory at any time, type `cd` without arguments.
+Each user is given a home directory.  Ours is `/home/codespace`.  To go to your home directory at any time, type `cd` without arguments.
 
 **Command:**
 
@@ -506,7 +506,7 @@ $ pwd
 **Output:**
 
 ~~~
-/home/node
+/home/codespace
 ~~~
 
 ### Home directory contents
@@ -650,8 +650,7 @@ $ cd exercise-data
 *(Output is silent)*
 
 
-These commands will move us from our home directory into our Desktop directory, then into
-the `shell-lesson-data` directory, then into the `exercise-data` directory.
+These commands will move us into the `shell-lesson-data` directory, then into the `exercise-data` directory.
 You will notice that `cd` doesn't print anything. This is normal.
 Many shell commands will not output anything to the screen when successfully executed.
 But if we run `pwd` after it, we can see that we are now
@@ -825,16 +824,15 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 
 
 
-> ## <mark style="background-color: rgba(0, 255, 85, 0.61);">Challenge: Absolute vs Relative Paths</mark> 
+> ## Challenge: Absolute vs Relative Paths
 >
-<mark style="background-color: rgba(255, 0, 0, 1);">Make this workspaces-specific</mark>
-> Starting from `/Users/amanda/data`,
-> which of the following commands could Amanda use to navigate to her home directory,
-> which is `/Users/amanda`?
+> Starting from `/home/codespace/data`,
+> which of the following commands could you use to navigate to the home directory,
+> which is `/home/codespace`?
 >
 > 1. `cd .`
 > 2. `cd /`
-> 3. `cd /home/amanda`
+> 3. `cd /home/codespace`
 > 4. `cd ../..`
 > 5. `cd ~`
 > 6. `cd home`
@@ -845,9 +843,9 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > > ## Solution
 > > 1. No: `.` stands for the current directory.
 > > 2. No: `/` stands for the root directory.
-> > 3. No: Amanda's home directory is `/Users/amanda`.
-> > 4. No: this command goes up two levels, i.e. ends in `/Users`.
-> > 5. Yes: `~` stands for the user's home directory, in this case `/Users/amanda`.
+> > 3. Yes: this is the absolute path to the home directory.
+> > 4. No: this command goes up two levels, i.e. ends in `/home`.
+> > 5. Yes: `~` stands for the user's home directory, in this case `/home/codespace`.
 > > 6. No: this command would navigate into a directory `home` in the current directory
 > >     if it exists.
 > > 7. Yes: unnecessarily complicated, but correct.
@@ -855,7 +853,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > > 9. Yes: goes up one level.
 > 
 
-> ## <mark style="background-color: rgba(0, 255, 85, 0.61);">Challenge: Relative Path Resolution</mark>
+> ## Challenge: Relative Path Resolution
 >
 > Using the filesystem diagram below, if `pwd` displays `/data/thing`,
 > what will `ls -F ../backup` display?
@@ -942,11 +940,8 @@ doesn't exist. Also, capitalization can be important.
 For example, `ls -s` will display the size of files and directories alongside the names,
 while `ls -S` will sort the files and directories by size, as shown below:
 
-<mark style="background-color: #CCFF00;">BACK TO THE MATERIALS</mark>
-
-
 ~~~
-$ cd /workspaces/shell-novice/shell-lesson-data
+$ cd /workspaces/codespace-shell-novice/shell-lesson-data
 $ ls -s exercise-data
 total 28
  4 animal-counts   4 creatures  12 numbers.txt   4 alkanes   4 writing
@@ -967,17 +962,15 @@ Putting all that together, our command `ls -F /` above gives us a listing
 of files and directories in the root directory `/`.
 An example of the output you might get from the above command is given below:
 
-<mark style="background-color: #CCFF00;">FRUSTRATION: Back to a Mac example</mark>
-
 ~~~
 $ ls -F /
 ~~~
 
 
 ~~~
-Applications/         System/
-Library/              Users/
-Network/              Volumes/
+bin/   etc/   lib64/       mnt/   root/  sys/  var/
+boot/  home/  lost+found/  opt/   run/   tmp/  workspaces/
+dev/   lib/   media/       proc/  sbin/  usr/
 ~~~
 
 

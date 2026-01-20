@@ -29,7 +29,7 @@ In this episode we will learn about creating and moving files and directories,
 using the `exercise-data/writing` directory as an example.
 
 ### Step one: see where we are and what we already have
-We should still be in the `shell-lesson-data` directory on the Desktop,
+We should still be in the `shell-lesson-data` directory in our Codespace,
 which we can check using:
 
 ~~~
@@ -38,7 +38,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/workspaces/shell-novice/shell-lesson-data
+/workspaces/codespace-shell-novice/shell-lesson-data
 ~~~
 {: .output}
 
@@ -160,8 +160,6 @@ data/  results/
 ### Create a text file
 Let's change our working directory to `thesis` using `cd`,
 then run a text editor called Nano to create a file called `draft.txt`:
-
-<mark style="background-color: #CCFF00;">NOTE: This part is kind of crazy since we have VS code in the browser.  We have to stress that it won't be available on linux servers.</mark>
 
 ~~~
 $ cd thesis
@@ -319,7 +317,7 @@ draft.txt
 Returning to the `shell-lesson-data/exercise-data/writing` directory,
 
 ```
-$ cd /workspaces/shell-novice/shell-lesson-data/exercise-data/writing/thesis
+$ cd /workspaces/codespace-shell-novice/shell-lesson-data/exercise-data/writing/thesis
 ```
 {: .language-bash}
 
@@ -515,8 +513,6 @@ quotations.txt
 > > identical file names cannot be created.
 > {: .solution}
 
-
-<mark style="background-color: #CCFF00;">HERE is a "challenge" where the directory structure is hypothetical and they have to figure out the answer. Maybe change minimally if at all.</mark>
 
 {: .challenge}
 
