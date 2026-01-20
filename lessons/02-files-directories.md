@@ -58,7 +58,7 @@ Make sure **TERMINAL** is underlined. You can click other tabs (PROBLEMS, OUTPUT
 👀 First, look at the **prompt**, which appears as:
 
 ~~~
-@ghuser ➜ /workspaces/terminal-sync-vscode (main) $ 
+@ghuser ➜ /workspaces/codespace-shell-novice (main) $ 
 ~~~
 
 💡 NOTICE:  **"ghuser"** is your GitHub username (mine is <mark style="font-weight:bold; background-color: rgba(0, 0, 0, 0); color: #267B00">meekrob</mark>).  
@@ -114,16 +114,16 @@ $ pwd
 **Output:**
 
 ```
-/workspaces/terminal-sync-vscode/
+/workspaces/codespace-shell-novice/
 ```
 
-Here, the computer's response is `/workspaces/terminal-sync-vscode/`.  
+Here, the computer's response is `/workspaces/codespace-shell-novice/`.  
 This location is particular to GitHub Codespaces. We will refer to this as the **Codespace Starting Directory**.  On a normal server,
 you will be in your **HOME** directory (discussed later).
 
 At the top of the filesystem is the **root directory**, which holds everything else.  
 It is written as a single slash `/`; this is the leading slash in  
-`/workspaces/terminal-sync-vscode/`.
+`/workspaces/codespace-shell-novice/`.
 
 Inside that directory are several other directories:
 `bin` (which is where some built-in programs are stored),
@@ -132,7 +132,7 @@ Inside that directory are several other directories:
 `tmp` (for temporary files that don't need to be stored long-term),
 and so on.
 
-We know that our current working directory `/workspaces/terminal-sync-vscode/` is stored inside `/workspaces`
+We know that our current working directory `/workspaces/codespace-shell-novice/` is stored inside `/workspaces`
 because "/workspaces" is the first part of its name.
 Similarly,
 we know that `/workspaces` is stored inside the root directory `/`
@@ -439,7 +439,7 @@ To **quit** the `man` pages, press <kbd>q</kbd>.
 
 9. **Root and Subdirectories**  
    - `/` = root directory  
-   - Subdirectories are nested inside, e.g., `/workspaces` → `/workspaces/terminal-sync-vscode/`  
+   - Subdirectories are nested inside, e.g., `/workspaces` → `/workspaces/codespace-shell-novice/`  
 
 10. **Prompt & Cursor**  
     - `$` = static prompt symbol  
@@ -566,14 +566,14 @@ Let's return to our **Codespace Starting Directory**.
 **Commands:**
 
 ~~~
-$ cd /workspaces/terminal-sync-vscode
+$ cd /workspaces/codespace-shell-novice
 $ pwd
 ~~~
 
 **Output:**
 
 ~~~
-/workspaces/terminal-sync-vscode
+/workspaces/codespace-shell-novice
 ~~~
 
 So far we have shown `ls` being used to list directories by doing `cd directory` first and then doing `ls`.  
@@ -655,10 +655,10 @@ the `shell-lesson-data` directory, then into the `exercise-data` directory.
 You will notice that `cd` doesn't print anything. This is normal.
 Many shell commands will not output anything to the screen when successfully executed.
 But if we run `pwd` after it, we can see that we are now
-in `/workspaces/terminal-sync-vscode/shell-lesson-data/exercise-data`.
+in `/workspaces/codespace-shell-novice/shell-lesson-data/exercise-data`.
 
 If we run `ls -F` without arguments now,
-it lists the contents of `/workspaces/terminal-sync-vscode/shell-lesson-data/exercise-data`,
+it lists the contents of `/workspaces/codespace-shell-novice/shell-lesson-data/exercise-data`,
 because that's where we now are:
 
 **Command:**
@@ -669,7 +669,7 @@ $ pwd
 
 
 ~~~
-/workspaces/terminal-sync-vscode/shell-lesson-data/exercise-data
+/workspaces/codespace-shell-novice/shell-lesson-data/exercise-data
 ~~~
 
 **Command:**
@@ -721,7 +721,7 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/workspaces/terminal-sync-vscode/shell-lesson-data`:
+if we run `pwd` after running `cd ..`, we're back in `/workspaces/codespace-shell-novice/shell-lesson-data`:
 
 **Command:**
 
@@ -731,7 +731,7 @@ $ pwd
 
 
 ~~~
-/workspaces/terminal-sync-vscode/shell-lesson-data/
+/workspaces/codespace-shell-novice/shell-lesson-data/
 ~~~
 
 
@@ -752,7 +752,7 @@ $ ls -F -a
 
 `-a` stands for 'show all' (including hidden files);
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/workspaces/terminal-sync-vscode`, refers to the `/workspaces` directory).
+such as `..` (which, if we're in `/workspaces/codespace-shell-novice`, refers to the `/workspaces` directory).
 As you can see,
 it also displays another special directory that's just called `.`,
 which means 'the current working directory'.
@@ -800,7 +800,7 @@ $ pwd
 
 
 ~~~
-/workspaces/terminal-sync-vscode/shell-lesson-data
+/workspaces/codespace-shell-novice/shell-lesson-data
 ~~~
 
 
@@ -819,8 +819,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > $ cd -
 > ~~~
 
-> you'll see you're back in `/workspaces/terminal-sync-vscode/shell-lesson-data`.
-> Run `cd -` again and you're back in `/workspaces/terminal-sync-vscode/shell-lesson-data/exercise-data/creatures`
+> you'll see you're back in `/workspaces/codespace-shell-novice/shell-lesson-data`.
+> Run `cd -` again and you're back in `/workspaces/codespace-shell-novice/shell-lesson-data/exercise-data/creatures`
 
 
 

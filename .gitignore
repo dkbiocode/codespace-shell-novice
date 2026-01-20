@@ -1,0 +1,4 @@
+# npm environment (persists in maintainer's Codespace only)
+node_modules/
+package.json
+package-lock.json
