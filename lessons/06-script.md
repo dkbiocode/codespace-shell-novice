@@ -1,21 +1,22 @@
----
-title: "Shell Scripts"
-teaching: 30
-exercises: 15
-questions:
-- "How can I save and re-use commands?"
-objectives:
-- "Write a shell script that runs a command or series of commands for a fixed set of files."
-- "Run a shell script from the command line."
-- "Write a shell script that operates on a set of files defined by the user on the command line."
-- "Create pipelines that include shell scripts you, and others, have written."
-keypoints:
-- "Save commands in files (usually called shell scripts) for re-use."
-- "`bash [filename]` runs the commands saved in a file."
-- "`$@` refers to all of a shell script's command-line arguments."
-- "`$1`, `$2`, etc., refer to the first command-line argument, the second command-line argument, etc."
-- "Place variables in quotes if the values might have spaces in them."
-- "Letting users decide what files to process is more flexible and more consistent with built-in Unix commands."
+# Shell Scripts
+
+**Questions:**
+- How can I save and re-use commands?
+
+**Objectives:**
+- Write a shell script that runs a command or series of commands for a fixed set of files.
+- Run a shell script from the command line.
+- Write a shell script that operates on a set of files defined by the user on the command line.
+- Create pipelines that include shell scripts you, and others, have written.
+
+**Key Points:**
+- Save commands in files (usually called shell scripts) for re-use.
+- `bash [filename]` runs the commands saved in a file.
+- `$@` refers to all of a shell script's command-line arguments.
+- `$1`, `$2`, etc., refer to the first command-line argument, the second command-line argument, etc.
+- Place variables in quotes if the values might have spaces in them.
+- Letting users decide what files to process is more flexible and more consistent with built-in Unix commands.
+
 ---
 
 We are finally ready to see what makes the shell such a powerful programming environment.
@@ -644,4 +645,6 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 > {: .solution}
 {: .challenge}
 
-{% include links.md %}
+---
+
+[Previous: Loops](05-loop.md)

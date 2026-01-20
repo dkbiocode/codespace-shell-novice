@@ -164,8 +164,7 @@ $ ls
 **Output:**
 
 ```
-install-extension.sh  LICENSE       out           package-lock.json  shell-lesson-data  terminal-file-explorer-1.1.0.vsix
-lessons               node_modules  package.json  README.md          src                tsconfig.json
+CODESPACE-README.md  ENVIRONMENT_REFERENCES.md  VS-CODE-README.md  lessons  shell-lesson-data
 ```
 
 `ls` prints the names of the files and directories in the current directory.
@@ -189,14 +188,13 @@ $ ls -F
 **Output:**
 
 ~~~
-install-extension.sh  LICENSE        out/          package-lock.json  shell-lesson-data/  terminal-file-explorer-1.1.0.vsix
-lessons/              node_modules/  package.json  README.md          src/                tsconfig.json
+CODESPACE-README.md  ENVIRONMENT_REFERENCES.md  VS-CODE-README.md  lessons/  shell-lesson-data/
 ~~~
 
 
 Here,
 we can see that the our directory contains **sub-directories** when `ls -F` 
-shows a trailing slash on the name (such as `out/`).
+shows a trailing slash on the name (such as `lessons/`).
 Any names in the output that don't have a classification symbol
 are **files** in the current working directory.
 
@@ -537,6 +535,8 @@ $ ls -a
 ~~~
 
 **Output:**
+
+*yours will differ*
 
 ~~~
 .   .bash_history  .bashrc  .config  .dotnet     .lesshst    .npm            .profile        .zprofile
@@ -1046,4 +1046,6 @@ and we will see it in many other tools as we go on.
 
 [Arguments]: https://swcarpentry.github.io/shell-novice/reference.html#argument
 
-{% include links.md %}
+---
+
+[Previous: Introduction](01-introduction.md) | [Next: Modifying Files and Directories](03-create.md)

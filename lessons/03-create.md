@@ -1,25 +1,26 @@
----
-title: "Working With Files and Directories"
-teaching: 30
-exercises: 20
-questions:
-- "How can I create, copy, and delete files and directories?"
-- "How can I edit files?"
-objectives:
-- "Create a directory hierarchy that matches a given diagram."
-- "Create files in that hierarchy using an editor or by copying and renaming existing files."
-- "Delete, copy and move specified files and/or directories."
-keypoints:
-- "`cp [old] [new]` copies a file."
-- "`mkdir [path]` creates a new directory."
-- "`mv [old] [new]` moves (renames) a file or directory."
-- "`rm [path]` removes (deletes) a file."
-- "`*` matches zero or more characters in a filename, so `*.txt` matches all files ending in `.txt`."
-- "`?` matches any single character in a filename, so `?.txt` matches `a.txt` but not `any.txt`."
-- "Use of the Control key may be described in many ways, including `Ctrl-X`, `Control-X`, and `^X`."
-- "The shell does not have a trash bin: once something is deleted, it's really gone."
-- "Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file."
-- "Depending on the type of work you do, you may need a more powerful text editor than Nano."
+# Modifying Files and Directories
+
+**Questions:**
+- How can I create, copy, and delete files and directories?
+- How can I edit files?
+
+**Objectives:**
+- Create a directory hierarchy that matches a given diagram.
+- Create files in that hierarchy using an editor or by copying and renaming existing files.
+- Delete, copy and move specified files and/or directories.
+
+**Key Points:**
+- `cp [old] [new]` copies a file.
+- `mkdir [path]` creates a new directory.
+- `mv [old] [new]` moves (renames) a file or directory.
+- `rm [path]` removes (deletes) a file.
+- `*` matches zero or more characters in a filename, so `*.txt` matches all files ending in `.txt`.
+- `?` matches any single character in a filename, so `?.txt` matches `a.txt` but not `any.txt`.
+- Use of the Control key may be described in many ways, including `Ctrl-X`, `Control-X`, and `^X`.
+- The shell does not have a trash bin: once something is deleted, it's really gone.
+- Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file.
+- Depending on the type of work you do, you may need a more powerful text editor than Nano.
+
 ---
 ## Creating directories
 We now know how to explore files and directories,
@@ -982,4 +983,6 @@ or sets of characters when navigating the Unix file system.
 > {: .solution}
 {: .challenge}
 
-{% include links.md %}
+---
+
+[Previous: Navigating Files and Directories](02-files-directories.md) | [Next: Pipes and Filters](04-pipefilter.md)
