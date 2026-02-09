@@ -10,7 +10,7 @@
 3. Click on that button for the pulldown box. If you are logged in, you will see a "Codespaces" tab.
 4. Find <b>shell-novice-image</b> and click.
 
-![codespace screenshot](lessons/img/codespace_pulldown_screenshot.png)
+<img src="lessons/img/codespace_pulldown_screenshot.png" width="500" />
 
 Once you click, it will take a minute or so to get started up, so sit back and watch!
 
