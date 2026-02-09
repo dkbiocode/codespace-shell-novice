@@ -7,12 +7,14 @@
 
 ![green button screenshot](lessons/img/github_green_button_screenshot.png)
 
-3. Click on that button for the pulldown box. If you are logged in, you will see a "CODESPACES" tab.
-4. Find <b>obscure doodle</b> and click.
+3. Click on that button for the pulldown box. If you are logged in, you will see a "Codespaces" tab.
+4. Find <b>shell-novice-image</b> and click.
 
 ![codespace screenshot](lessons/img/codespace_pulldown_screenshot.png)
 
 Once you click, it will take a minute or so to get started up, so sit back and watch!
+
+<b>Note: you're using a free tier. So don't worry about "this codespace is paid for by..."</b>
 
 ## Launching the Codespace means launching VS Code!
 
