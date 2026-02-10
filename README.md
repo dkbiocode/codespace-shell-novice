@@ -30,4 +30,4 @@ If you are not familiar with VS Code, see [VS-CODE-README.md](VS-CODE-README.md)
 
 The learning environment will be a lightweight cloud computing setting that will be the same for everyone, and most similar to a server you may encounter in HPC. We will use this setting for basic tutorials.
 
-![codespace screenshot](lessons/img/lessons/img/codespace-model-diagram.png)
+![codespace screenshot](lessons/img/codespace-model-diagram.png)
