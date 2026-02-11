@@ -1,6 +1,10 @@
-# Getting Started in the tutorial environment
+# Using Codespaces for this Lesson
 
-## Github: register and find the repository
+This repository runs a lightweight Linux server in The Cloud, using your web browser as an interface. You will use VS Code, which includes a terminal, file browser, editor, and other useful tools.
+
+![codespace screenshot](lessons/img/codespace-model-diagram.png)
+
+## Github: Sign up and find the repository
 
 1. Make sure you have an account [on Github.com](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github#signing-up-for-a-new-personal-account). You will have to verify your email.
 2. Next, navigate to this lesson repository: [codespace-shell-novice](https://github.com/dkbiocode/codespace-shell-novice) and find the green button that says <b><> Code</b>.
@@ -26,8 +30,3 @@ Here is a screenshot:
 
 If you are not familiar with VS Code, see [VS-CODE-README.md](VS-CODE-README.md) to get oriented. If you are, you can skip ahead to the lessons.
 
-## Github codespaces: launch the learning environment
-
-The learning environment will be a lightweight cloud computing setting that will be the same for everyone, and most similar to a server you may encounter in HPC. We will use this setting for basic tutorials.
-
-![codespace screenshot](lessons/img/codespace-model-diagram.png)
