@@ -1,7 +1,9 @@
 
+[Table of Contents](README.md) | [Click here to go to 02-files and directories.](02-files-directories.md)
+
 # Getting Started in the tutorial environment
 
-See CODESPACE-README.md
+If you want a breakdown of Github Codespaces, [See CODESPACE-README.md](../README.md)
 
 ### Launching the Codespace means launching VS Code! (described below)
 
@@ -117,4 +119,4 @@ In order to achieve her task, Nelle needs to know how to:
 
 [The next lesson](02-files-directories.md) will go over file and directory basics, and then go back to the applied application of Nelle's research.
 
-[Click here to go to 02-files and directories.](02-files-directories.md)
+[Table of Contents](README.md) | [Click here to go to 02-files and directories.](02-files-directories.md)

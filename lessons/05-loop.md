@@ -1,3 +1,6 @@
+[Previous: Pipes and Filters](04-pipefilter.md) | [Table of Contents](README.md) | [Next: Shell Scripts](06-script.md)
+
+
 # Loops
 
 **Questions:**
@@ -775,4 +778,4 @@ so she decides to get some coffee and catch up on her reading.
 
 ---
 
-[Previous: Pipes and Filters](04-pipefilter.md) | [Next: Shell Scripts](06-script.md)
+[Previous: Pipes and Filters](04-pipefilter.md) | [Table of Contents](README.md) | [Next: Shell Scripts](06-script.md)

@@ -3,6 +3,9 @@ Note: this document is markdown. Text is readable, but formatting is better in V
 ---
 <a id="top"></a>
 
+[Table of Contents](README.md) | [Click here to go to 02-files and directories.](02-files-directories.md)
+
+
 # 02-files-directories
 
 **Command line Files and Directories (folders)**
@@ -1048,4 +1051,4 @@ and we will see it in many other tools as we go on.
 
 ---
 
-[Previous: Introduction](01-introduction.md) | [Next: Modifying Files and Directories](03-create.md)
+[Previous: Introduction](01-introduction.md) | [Table of Contents](README.md) | [Next: Modifying Files and Directories](03-create.md)

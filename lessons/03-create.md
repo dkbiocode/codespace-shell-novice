@@ -1,3 +1,6 @@
+[Previous: Navigating Files and Directories](02-files-directories.md) | [Table of Contents](README.md) | [Next: Pipes and Filters](04-pipefilter.md)
+
+
 # Modifying Files and Directories
 
 **Questions:**
@@ -931,4 +934,4 @@ or sets of characters when navigating the Unix file system.
 
 ---
 
-[Previous: Navigating Files and Directories](02-files-directories.md) | [Next: Pipes and Filters](04-pipefilter.md)
+[Previous: Navigating Files and Directories](02-files-directories.md) | [Table of Contents](README.md) | [Next: Pipes and Filters](04-pipefilter.md)

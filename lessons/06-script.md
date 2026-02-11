@@ -1,3 +1,5 @@
+[Previous: Loops](05-loop.md) | [Table of Contents](README.md)
+
 # Shell Scripts
 
 **Questions:**
@@ -608,4 +610,4 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 
 ---
 
-[Previous: Loops](05-loop.md)
+[Previous: Loops](05-loop.md) | [Table of Contents](README.md)

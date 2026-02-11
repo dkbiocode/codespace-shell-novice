@@ -1,3 +1,6 @@
+[Previous: Modifying Files and Directories](03-create.md) | [Table of Contents](README.md) | [Next: Loops](05-loop.md)
+
+
 # Pipes and Filters
 
 **Questions:**
@@ -675,4 +678,4 @@ so instead, she'll have to be careful later on to select files using the wildcar
 
 ---
 
-[Previous: Modifying Files and Directories](03-create.md) | [Next: Loops](05-loop.md)
+[Previous: Modifying Files and Directories](03-create.md) | [Table of Contents](README.md) | [Next: Loops](05-loop.md)
