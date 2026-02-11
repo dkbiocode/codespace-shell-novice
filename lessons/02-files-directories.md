@@ -51,7 +51,7 @@ To begin exploring file and directory commands, open the **TERMINAL** pane.
 
 👀 It’s the bottom pane of your VS Code window, and looks like:
 
-![terminal pane screenshot](img/terminal-pane.png)
+![terminal pane screenshot](img/old-terminal-pane.png)
 
 Make sure **TERMINAL** is underlined. You can click other tabs (PROBLEMS, OUTPUT, etc.), but return to **TERMINAL** before continuing.
 
