@@ -1,12 +1,17 @@
----
-Note: this document is markdown. Text is readable, but formatting is better in VS Code's Preview. In VS Code, do Shift-CTRL-V (Shift CMD-V on MAC).
----
+
+> &Gg; this document is markdown. Text is readable, but formatting is better in <mark>VS Code's Preview.</mark> In VS Code, do Shift-CTRL-V (Shift CMD-V on MAC). &Ll;
+
+
+
+<br>
 <a id="top"></a>
+<p style="text-align: center;"> <a href="README.md">[ &#127968; Table of Contents]</a> <br/>  <a href="01-introduction.md">[01-Introduction &larr;] </a> | <a href="#bottom">&darr; Bottom</a> | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a></p>
 
-[Table of Contents](README.md) | [Click here to go to 02-files and directories.](02-files-directories.md)
+---
 
 
-# 02-files-directories
+
+# 02-Files and Directories
 
 **Command line Files and Directories (folders)**
 
@@ -1036,7 +1041,7 @@ the first three characters 'goo'.
 $ ls north-pacific-gyre/goo
 ~~~
 
-
+<a id="bottom"></a>
 To see all of those files, she can press <kbd>Tab</kbd> twice more.
 ~~~
 ls north-pacific-gyre/goo
@@ -1051,4 +1056,7 @@ and we will see it in many other tools as we go on.
 
 ---
 
-[Previous: Introduction](01-introduction.md) | [Table of Contents](README.md) | [Next: Modifying Files and Directories](03-create.md)
+<p style="text-align: center;"> <a href="01-introduction.md">[01-Introduction &larr;] </a> | <a href="#bottom">&darr; Bottom</a> | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a><br/><a href="README.md">[ &#127968; Table of Contents]</a> </p>
+
+
+

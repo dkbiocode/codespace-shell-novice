@@ -1,7 +1,14 @@
-[Previous: Navigating Files and Directories](02-files-directories.md) | [Table of Contents](README.md) | [Next: Pipes and Filters](04-pipefilter.md)
+> &Gg; this document is markdown. Text is readable, but formatting is better in <mark>VS Code's Preview.</mark> In VS Code, do Shift-CTRL-V (Shift CMD-V on MAC). &Ll;
+
+<br>
+<a id="top"></a>
+<p style="text-align: center;"> <a href="README.md">[ &#127968; Table of Contents]</a> <br/>  <a href="02-files-directories.md">[02-Files and Directories &larr;] </a> | <a href="#bottom">&darr; Bottom</a> | <a href="04-pipefilter.md">[&rarr; 04-Pipes and Filters.]</a></p>
+
+---
 
 
-# Modifying Files and Directories
+
+# 03 Modifying Files and Directories
 
 **Questions:**
 - How can I create, copy, and delete files and directories?
@@ -232,7 +239,7 @@ draft.txt
 > ~~~
 > $ touch my_file.txt
 > ~~~
-> {: .language-bash}
+>
 >
 > 1.  What did the `touch` command do?
 >     When you look at your current directory using the GUI file explorer,
@@ -259,7 +266,7 @@ draft.txt
 > >     populate with its output.  The touch command allows you to
 > >     efficiently generate a blank text file to be used by such
 > >     programs.
-> {: .solution}
+>
 >
 > To avoid confusion later on,
 > we suggest removing the file you've just created before proceeding with the rest
@@ -269,7 +276,7 @@ draft.txt
 > ~~~
 > $ rm my_file.txt
 > ~~~
-> {: .language-bash}
+>
 
 > ## What's In A Name?
 >
@@ -396,7 +403,7 @@ quotes.txt
 > fructose.dat glucose.dat maltose.dat sucrose.dat
 > $ cd analyzed
 > ~~~
-> {: .language-bash}
+> 
 >
 > Fill in the blanks to move these files to the `raw/` folder
 > (i.e. the one she forgot to put them in)
@@ -404,15 +411,15 @@ quotes.txt
 > ~~~
 > $ mv sucrose.dat maltose.dat ____/____
 > ~~~
-> {: .language-bash}
+> 
 > > ## Solution
 > > ```
 > > $ mv sucrose.dat maltose.dat ../raw
 > > ```
-> > {: .language-bash}
+> > 
 > > Recall that `..` refers to the parent directory (i.e. one above the current directory)
 > > and that `.` refers to the current directory.
-> {: .solution}
+> 
 
 ## Copying files and directories
 
@@ -477,7 +484,7 @@ quotations.txt
 > > cannot be created.
 > > 4. No, the period(.) indicates where to copy the file, but does not provide a new file name;
 > > identical file names cannot be created.
-> {: .solution}
+> 
 
 
 
@@ -489,26 +496,26 @@ quotations.txt
 > ~~~
 > $ pwd
 > ~~~
-> {: .language-bash}
+>
 > ~~~
 > /Users/jamie/data
 > ~~~
-> {: .output}
+> 
 > ~~~
 > $ ls
 > ~~~
-> {: .language-bash}
+>
 > ~~~
 > proteins.dat
 > ~~~
-> {: .output}
+>
 > ~~~
 > $ mkdir recombined
 > $ mv proteins.dat recombined/
 > $ cp recombined/proteins.dat ../proteins-saved.dat
 > $ ls
 > ~~~
-> {: .language-bash}
+> 
 >
 >
 > 1.   `proteins-saved.dat recombined`
@@ -530,7 +537,7 @@ quotations.txt
 > > 2. Yes
 > > 3. No, see explanation above.  `proteins.dat` is located at `/Users/jamie/data/recombined`
 > > 4. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
-> {: .solution}
+>
 
 ## Removing files and directories
 
@@ -572,13 +579,13 @@ ls: cannot access 'quotes.txt': No such file or directory
 > > ```
 > > rm: remove regular file 'thesis_backup/quotations.txt'? y
 > > ```
-> > {: .output}
+> >
 > > The `-i` option will prompt before (every) removal (use <kbd>Y</kbd> to confirm deletion
 > > or <kbd>N</kbd> to keep the file).
 > > The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
 > > By using the `-i` option, we have the chance to check that we are deleting only the files
 > > that we want to remove.
-> {: .solution}
+> 
 
 
 If we try to remove the `thesis` directory using `rm thesis`,
@@ -623,7 +630,6 @@ or sets of characters when navigating the Unix file system.
 > $ mkdir backup
 > $ cp creatures/minotaur.dat creatures/unicorn.dat backup/
 > ~~~
-> {: .language-bash}
 >
 > In the example below, what does `cp` do when given three or more file names?
 >
@@ -631,15 +637,12 @@ or sets of characters when navigating the Unix file system.
 > $ cd creatures
 > $ ls -F
 > ~~~
-> {: .language-bash}
 > ~~~
 > basilisk.dat  minotaur.dat  unicorn.dat
 > ~~~
-> {: .output}
 > ~~~
 > $ cp minotaur.dat unicorn.dat basilisk.dat
 > ~~~
-> {: .language-bash}
 >
 > > ## Solution
 > > If given more than one file name followed by a directory name
@@ -652,8 +655,7 @@ or sets of characters when navigating the Unix file system.
 > > ```
 > > cp: target 'basilisk.dat' is not a directory
 > > ```
-> > {: .error}
-> {: .solution}
+>
 
 ### Using wildcards for accessing multiple files at once
 
@@ -716,7 +718,8 @@ or sets of characters when navigating the Unix file system.
 >> This is the solution.
 >>
 >> `4.` only shows files starting with `ethane.`.
-> {: .solution}
+>
+
 
 > ## More on Wildcards
 >
@@ -744,7 +747,6 @@ or sets of characters when navigating the Unix file system.
 >     ├── all_datasets_created_on_a_23rd
 >     └── all_november_files
 > ~~~
-> {: .language-bash}
 >
 > Before heading off to another field trip, she wants to back up her data and
 > send some datasets to her colleague Bob. Sam uses the following commands
@@ -756,7 +758,6 @@ or sets of characters when navigating the Unix file system.
 > $ cp 2015-____-____ send_to_bob/all_november_files/
 > $ cp ____ send_to_bob/all_datasets_created_on_a_23rd/
 > ~~~
-> {: .language-bash}
 >
 > Help Sam by filling in the blanks.
 >
@@ -804,7 +805,7 @@ or sets of characters when navigating the Unix file system.
 >         ├── 2015-11-23-dataset2.txt
 >         └── 2015-11-23-dataset_overview.txt
 > ```
-> {: .language-bash}
+> 
 >
 > > ## Solution
 > > ```
@@ -812,8 +813,8 @@ or sets of characters when navigating the Unix file system.
 > > $ cp 2015-11-* send_to_bob/all_november_files/
 > > $ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
 > > ```
-> > {: .language-bash}
-> {: .solution}
+> > 
+> 
 
 > ## Organizing Directories and Files
 >
@@ -823,11 +824,11 @@ or sets of characters when navigating the Unix file system.
 > ~~~
 > $ ls -F
 > ~~~
-> {: .language-bash}
+> 
 > ~~~
 > analyzed/  fructose.dat    raw/   sucrose.dat
 > ~~~
-> {: .output}
+> 
 >
 > The `fructose.dat` and `sucrose.dat` files contain output from her data
 > analysis. What command(s) covered in this lesson does she need to run
@@ -836,29 +837,29 @@ or sets of characters when navigating the Unix file system.
 > ~~~
 > $ ls -F
 > ~~~
-> {: .language-bash}
+> 
 > ~~~
 > analyzed/   raw/
 > ~~~
-> {: .output}
+> 
 > ~~~
 > $ ls analyzed
 > ~~~
-> {: .language-bash}
+> 
 > ~~~
 > fructose.dat    sucrose.dat
 > ~~~
-> {: .output}
+> 
 >
 > > ## Solution
 > > ```
 > > mv *.dat analyzed
 > > ```
-> > {: .language-bash}
+> > 
 > > Jamie needs to move her files `fructose.dat` and `sucrose.dat` to the `analyzed` directory.
 > > The shell will expand *.dat to match all .dat files in the current directory.
 > > The `mv` command then moves the list of .dat files to the 'analyzed' directory.
-> {: .solution}
+> 
 
 > ## Reproduce a folder structure
 >
@@ -877,7 +878,7 @@ or sets of characters when navigating the Unix file system.
 >    ├── processed
 >    └── raw
 > ~~~
-> {: .output}
+> 
 >
 > Which of the following set of commands would achieve this objective?
 > What would the other commands do?
@@ -888,7 +889,7 @@ or sets of characters when navigating the Unix file system.
 > $ mkdir 2016-05-20/data/processed
 > $ mkdir 2016-05-20/data/raw
 > ~~~
-> {: .language-bash}
+> 
 > ~~~
 > $ mkdir 2016-05-20
 > $ cd 2016-05-20
@@ -896,24 +897,24 @@ or sets of characters when navigating the Unix file system.
 > $ cd data
 > $ mkdir raw processed
 > ~~~
-> {: .language-bash}
+> 
 > ~~~
 > $ mkdir 2016-05-20/data/raw
 > $ mkdir 2016-05-20/data/processed
 > ~~~
-> {: .language-bash}
+> 
 > ~~~
 > $ mkdir -p 2016-05-20/data/raw
 > $ mkdir -p 2016-05-20/data/processed
 > ~~~
-> {: .language-bash}
+> 
 > ~~~
 > $ mkdir 2016-05-20
 > $ cd 2016-05-20
 > $ mkdir data
 > $ mkdir raw processed
 > ~~~
-> {: .language-bash}
+>
 > >
 > > ## Solution
 > > The first two sets of commands achieve this objective.
@@ -930,8 +931,22 @@ or sets of characters when navigating the Unix file system.
 > >
 > > The final set of commands generates the 'raw' and 'processed' directories at the same level
 > > as the 'data' directory.
-> {: .solution}
+> 
+
+<a id="bottom"></a>
 
 ---
+
+<p style="text-align: center;"> 
+<a href="01-introduction.md">[01-Introduction &larr;] </a> | 
+<a href="#top">&uarr; Top</a> | 
+<a href="02-files-directories.md">[02-Files and Directories &larr;]</a>
+<br/>
+<a href="README.md">[ &#127968; Table of Contents]</a> </p>
+
+
+
+
+
 
 [Previous: Navigating Files and Directories](02-files-directories.md) | [Table of Contents](README.md) | [Next: Pipes and Filters](04-pipefilter.md)

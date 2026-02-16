@@ -1,7 +1,16 @@
+> &Gg; this document is markdown. Text is readable, but formatting is better in <mark>VS Code's Preview.</mark> In VS Code, do Shift-CTRL-V (Shift CMD-V on MAC). &Ll;
 
-[Table of Contents](README.md) | [Click here to go to 02-files and directories.](02-files-directories.md)
 
-# Getting Started in the tutorial environment
+
+<br>
+<a id="top"></a>
+<p style="text-align: center;"> <a href="README.md">[ &#127968; Table of Contents]</a> |  <a href="#bottom">&darr; Bottom</a> | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a></p>
+
+---
+
+# 01 Introduction
+
+**Getting Started in the tutorial environment**
 
 If you want a breakdown of Github Codespaces, [See CODESPACE-README.md](../README.md)
 
@@ -117,6 +126,9 @@ In order to achieve her task, Nelle needs to know how to:
 - iterate over files
 - run a shell script containing her pipeline
 
+<a id="bottom"></a>
 [The next lesson](02-files-directories.md) will go over file and directory basics, and then go back to the applied application of Nelle's research.
 
-[Table of Contents](README.md) | [Click here to go to 02-files and directories.](02-files-directories.md)
+---
+
+<p style="text-align: center;"> <a href="README.md">[ &#127968; &larr; Table of Contents]</a> |  <a href="#top">&uarr; Top</a>  | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a></p>
