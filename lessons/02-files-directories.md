@@ -1,5 +1,5 @@
 <!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
-<!-- This will open an editor tab labeled "Preview 04-files-directories.md"         -->
+<!-- This will open an editor tab labeled "Preview 02-files-directories.md"         -->
 <p id="top" style="text-align: center;"> 
 <a href="README.md">[ &#127968; Table of Contents]</a> <br/>  
 <a href="01-introduction.md">[&larr; 01-Introduction] </a> | 

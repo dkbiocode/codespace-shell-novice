@@ -1,5 +1,5 @@
 <!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
-<!-- This will open an editor tab labeled "Preview 04-pipefilter.md"                -->
+<!-- This will open an editor tab labeled "Preview 06-script.md"                -->
 <p id="top" style="text-align: center;"> 
 <a href="05-loop.md">[05-Loops &larr;] </a> | <a href="#bottom">[&darr; 06 Bottom]</a> | <a href="README.md">[Table of Contents &rarr;  &#127968;]</a> </p>
 
