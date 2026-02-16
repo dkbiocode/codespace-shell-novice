@@ -1,12 +1,11 @@
-> &Gg; this document is markdown. Text is readable, but formatting is better in <mark>VS Code's Preview.</mark> In VS Code, do Shift-CTRL-V (Shift CMD-V on MAC). &Ll;
-
-<br>
-<a id="top"></a>
-<p style="text-align: center;"> <a href="README.md">[ &#127968; Table of Contents]</a> <br/>  <a href="02-files-directories.md">[02-Files and Directories &larr;] </a> | <a href="#bottom">&darr; Bottom</a> | <a href="04-pipefilter.md">[&rarr; 04-Pipes and Filters.]</a></p>
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 03-create.md"                    -->
+<p id="top" style="text-align: center;"> 
+<a href="README.md">[ &#127968; Table of Contents]</a> <br/>  
+<a href="02-files-directories.md">[&larr; 02-Files and Directories] </a> | 
+<a href="#bottom">[&darr; 03 Bottom]</a> | <a href="04-pipefilter.md">[04-Pipes and Filters &rarr;]</a></p>
 
 ---
-
-
 
 # 03 Modifying Files and Directories
 
@@ -914,7 +913,9 @@ or sets of characters when navigating the Unix file system.
 > $ mkdir data
 > $ mkdir raw processed
 > ~~~
->
+
+<a id="bottom"></a>
+
 > >
 > > ## Solution
 > > The first two sets of commands achieve this objective.
@@ -932,21 +933,16 @@ or sets of characters when navigating the Unix file system.
 > > The final set of commands generates the 'raw' and 'processed' directories at the same level
 > > as the 'data' directory.
 > 
+>
 
-<a id="bottom"></a>
 
 ---
 
 <p style="text-align: center;"> 
-<a href="01-introduction.md">[01-Introduction &larr;] </a> | 
-<a href="#top">&uarr; Top</a> | 
-<a href="02-files-directories.md">[02-Files and Directories &larr;]</a>
+<a href="02-files-directories.md">[&larr; 02-Files and Directories] </a> | 
+<a href="#top">[03 Top &uarr;]</a> | 
+<a href="04-pipefilter.md">[04-Pipes and Filters &rarr;]</a>
 <br/>
 <a href="README.md">[ &#127968; Table of Contents]</a> </p>
 
 
-
-
-
-
-[Previous: Navigating Files and Directories](02-files-directories.md) | [Table of Contents](README.md) | [Next: Pipes and Filters](04-pipefilter.md)

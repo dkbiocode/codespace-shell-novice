@@ -1,7 +1,13 @@
-[Previous: Modifying Files and Directories](03-create.md) | [Table of Contents](README.md) | [Next: Loops](05-loop.md)
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 04-pipefilter.md"                -->
+<p id="top" style="text-align: center;"> 
+<a href="README.md">[ &#127968; Table of Contents]</a> <br/>  
+<a href="03-create.md">[03-Create &larr;] </a> | <a href="#bottom">[&darr; 04 Bottom]</a> | 
+<a href="05-loop.md">[&rarr; 05-Loops]</a></p>
 
+---
 
-# Pipes and Filters
+# 04 Pipes and Filters
 
 **Questions:**
 - How can I combine existing commands to do new things?
@@ -652,7 +658,7 @@ but there are actually some analyses she might do later where depth doesn't matt
 so instead, she'll have to be careful later on to select files using the wildcard expressions
 `NENE*A.txt NENE*B.txt`.
 
-
+<a id="bottom"></a>
 > ## Removing Unneeded Files
 >
 > Suppose you want to delete your processed data files, and only keep
@@ -674,8 +680,14 @@ so instead, she'll have to be careful later on to select files using the wildcar
 > > file called `.txt`
 > > 4. The shell would expand `*.*` to match all files with any extension,
 > > so this command would delete all files
-> {: .solution}
+> 
 
 ---
 
-[Previous: Modifying Files and Directories](03-create.md) | [Table of Contents](README.md) | [Next: Loops](05-loop.md)
+<p style="text-align: center;"> 
+<a href="03-create.md">[&larr; 03-create ] </a> | 
+<a href="#top">[&uarr; 04 Top]</a> | 
+<a href="05-loop.md">[&rarr; 05-Loops ]</a>
+<br/>
+<a href="README.md">[ &#127968; Table of Contents]</a> </p>
+

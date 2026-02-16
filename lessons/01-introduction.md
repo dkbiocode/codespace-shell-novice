@@ -1,10 +1,8 @@
-> &Gg; this document is markdown. Text is readable, but formatting is better in <mark>VS Code's Preview.</mark> In VS Code, do Shift-CTRL-V (Shift CMD-V on MAC). &Ll;
-
-
-
-<br>
-<a id="top"></a>
-<p style="text-align: center;"> <a href="README.md">[ &#127968; Table of Contents]</a> |  <a href="#bottom">&darr; Bottom</a> | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a></p>
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 01-introduction.md"              -->
+<p id="top"style="text-align: center;"> 
+<a href="README.md">[ &#127968; &larr; Table of Contents]</a> |  
+<a href="#bottom">[&darr; 01 Bottom</a>] | <a href="02-files-directories.md">[02-files and directories &rarr;]</a></p>
 
 ---
 
@@ -131,4 +129,4 @@ In order to achieve her task, Nelle needs to know how to:
 
 ---
 
-<p style="text-align: center;"> <a href="README.md">[ &#127968; &larr; Table of Contents]</a> |  <a href="#top">&uarr; Top</a>  | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a></p>
+<p style="text-align: center;"> <a href="README.md">[ &#127968; &larr; Table of Contents]</a> |  <a href="#top">[&uarr; 01 Top]</a>  | <a href="02-files-directories.md">[02-files and directories &rarr;]</a></p>

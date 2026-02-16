@@ -1,17 +1,13 @@
-
-> &Gg; this document is markdown. Text is readable, but formatting is better in <mark>VS Code's Preview.</mark> In VS Code, do Shift-CTRL-V (Shift CMD-V on MAC). &Ll;
-
-
-
-<br>
-<a id="top"></a>
-<p style="text-align: center;"> <a href="README.md">[ &#127968; Table of Contents]</a> <br/>  <a href="01-introduction.md">[01-Introduction &larr;] </a> | <a href="#bottom">&darr; Bottom</a> | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a></p>
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 04-files-directories.md"         -->
+<p id="top" style="text-align: center;"> 
+<a href="README.md">[ &#127968; Table of Contents]</a> <br/>  
+<a href="01-introduction.md">[&larr; 01-Introduction] </a> | 
+<a href="#bottom">[&darr; 02 Bottom]</a> | <a href="03-create.md">[03-Create &rarr;]</a></p>
 
 ---
 
-
-
-# 02-Files and Directories
+# 02 Files and Directories
 
 **Command line Files and Directories (folders)**
 
@@ -1056,7 +1052,11 @@ and we will see it in many other tools as we go on.
 
 ---
 
-<p style="text-align: center;"> <a href="01-introduction.md">[01-Introduction &larr;] </a> | <a href="#bottom">&darr; Bottom</a> | <a href="02-files-directories.md">[&rarr; 02-files and directories.]</a><br/><a href="README.md">[ &#127968; Table of Contents]</a> </p>
+<p style="text-align: center;"> <a href="01-introduction.md">[&larr; 01-Introduction] </a> | 
+<a href="#top">[&uarr; 02 Top]</a> | 
+<a href="02-files-directories.md">[02-files and directories &rarr;]</a>
+<br/>
+<a href="README.md">[&#127968; Table of Contents]</a> </p>
 
 
 

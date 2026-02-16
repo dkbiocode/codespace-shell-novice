@@ -1,6 +1,10 @@
-[Previous: Loops](05-loop.md) | [Table of Contents](README.md)
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 04-pipefilter.md"                -->
+<p id="top" style="text-align: center;"> 
+<a href="05-loop.md">[05-Loops &larr;] </a> | <a href="#bottom">[&darr; 06 Bottom]</a> | <a href="README.md">[Table of Contents &rarr;  &#127968;]</a> </p>
 
-# Shell Scripts
+---
+# 06 Shell Scripts
 
 **Questions:**
 - How can I save and re-use commands?
@@ -599,7 +603,10 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 >
 > What is the output showing you?
 > Which line is responsible for the error?
->
+
+
+<a id="bottom"></a>
+
 > > ## Solution
 > > The `-x` option causes `bash` to run in debug mode.
 > > This prints out each command as it is run, which will help you to locate errors.
@@ -610,4 +617,9 @@ Of course, this introduces another tradeoff between flexibility and complexity.
 
 ---
 
-[Previous: Loops](05-loop.md) | [Table of Contents](README.md)
+<p style="text-align: center;"> 
+<a href="05-loop.md">[&larr; 05-Loops ] </a> | 
+<a href="#top">&uarr; 06 Top</a> | 
+<a href="README.md">[ Table of Contents &rarr; &#127968; ]</a> </p>
+
+

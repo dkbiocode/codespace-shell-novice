@@ -1,7 +1,13 @@
-[Previous: Pipes and Filters](04-pipefilter.md) | [Table of Contents](README.md) | [Next: Shell Scripts](06-script.md)
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 03-create.md"                    -->
+<p id="top" style="text-align: center;"> 
+<a href="README.md">[ &#127968; Table of Contents]</a> <br/>  
+<a href="04-pipefilter.md">[&larr; 04-Pipes and Filters ] </a> | <a href="#bottom">[&darr; 05 Bottom]</a> | 
+<a href="06-script.md">[06-Scripts &rarr;]</a></p>
 
+---
 
-# Loops
+# 05  Loops
 
 **Questions:**
 - How can I perform the same actions on many different files?
@@ -766,7 +772,7 @@ so she decides to get some coffee and catch up on her reading.
 > >     done
 > > done
 > ~~~
-> {: .language-bash}
+> <a id="bottom"></a>
 >
 > > ## Solution
 > > We have a nested loop, i.e. contained within another loop, so for each species
@@ -778,4 +784,14 @@ so she decides to get some coffee and catch up on her reading.
 
 ---
 
-[Previous: Pipes and Filters](04-pipefilter.md) | [Table of Contents](README.md) | [Next: Shell Scripts](06-script.md)
+
+
+---
+
+<p style="text-align: center;"> 
+<a href="04-pipefilter.md">[&larr; 04-Pipes and Filters] </a> | 
+<a href="#top">[&uarr; 05 Top]</a> | 
+<a href="06-script.md">[06-Scripts &rarr;]</a>
+<br/>
+<a href="README.md">[ &#127968; Table of Contents]</a> </p>
+
