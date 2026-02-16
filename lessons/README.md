@@ -1,5 +1,8 @@
+# Using these markdown files in VS Code
 
-## Here are the individual lessons for shell-novice
+On Github Codespaces, any markdown file can be rendered into formatted text by "Previewing" it. Right-click on the file tab (such as README.md) and choose **Open Preview**.  Or do **Cmd-shift-V** on a Mac or **Ctrl-shift-V** on PC.
+
+# Here are the individual lessons for shell-novice
 
 1. [Introduction](01-introduction.md)
 2. [File and directory navigation](02-files-directories.md)
