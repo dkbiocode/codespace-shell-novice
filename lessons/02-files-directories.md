@@ -20,33 +20,6 @@ which hold files or other directories.
 
 Several commands are frequently used to create, inspect, rename, and delete files and directories.
 
-## Table of Contents
-
-- [Getting started](#getting-started)
-  - [Slashes](#slashes)
-  - [Clearing your terminal](#clearing-your-terminal)
-- [Getting help](#getting-help)
-  - [The `--help` option](#the-help-option)
-- [Unsupported command-line options](#unsupported-command-line-options)
-  - [The `man` command](#the-man-command)
-  - [Exploring More `ls` Options](#exploring-more-ls-options)
-    - [Challenge](#challenge)
-    - [Solution](#solution)
-  - [Listing in Reverse Chronological Order](#listing-in-reverse-chronological-order)
-    - [Challenge](#challenge-1)
-    - [Solution](#solution-1)
-- [📌 Section Recap](#-section-recap)
-- [Exploring Other Directories](#exploring-other-directories)
-  - [Other Hidden Files](#other-hidden-files)
-  - [Challenge: Absolute vs Relative Paths](#challenge-absolute-vs-relative-paths)
-    - [Solution](#solution-2)
-  - [Challenge: Relative Path Resolution](#challenge-relative-path-resolution)
-    - [Solution](#solution-3)
-  - [`ls` Reading Comprehension](#ls-reading-comprehension)
-    - [Solution](#solution-4)
-- [General Syntax of a Shell Command](#general-syntax-of-a-shell-command)
-- [Nelle's Pipeline: Organizing Files](#nelles-pipeline-organizing-files)
-
 ---
 
 ### Getting started
