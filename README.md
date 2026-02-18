@@ -1,4 +1,10 @@
-# Using Codespaces for this Lesson
+# Where to start
+
+Use this document as a how-to on getting started with Github and Codespaces. 
+
+Instructional material is in the "lessons" folder. See this [Table Of Contents](lessons/README.md) to begin.
+
+# Using Codespaces for this Training
 
 This repository runs a lightweight Linux server in The Cloud, using your web browser as an interface. You will use VS Code, which includes a terminal, file browser, editor, and other useful tools.
 

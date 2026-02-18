@@ -497,11 +497,26 @@ $ ls
 **Output:**
 
 ~~~
+java  nvm
 ~~~
 
-‼️ **Is it blank? That's OK!** Normally, a new account on Linux will have very few files here.  It will fill up as you work.
+On Codespaces, there might be a few directories, but, ‼️ **if it is blank, that's OK!** Normally, a new account on Linux will have very few files here.  It will fill up as you work.
 
 **However**, your home directory is the place for all the configuration that goes on with your shell and software you install.
+
+#### Differences between Codespaces and other computers
+
+| Platform | Login Directory              | Main place of work | 
+|----------|----------------------------- |--------------------|
+| Personal Computer     | Your home directory | Home Directory, Documents, Shared Drive   |
+| HPC Linux Server      | Your home directory | Dedicated Project and Scratch directories |
+| GitHub Codespace      | Codespace Directory | Codespace Directory |
+
+Notice that for these lessons, we start AND WORK in a different location than other real-world settings.
+
+---
+
+#### Back to the commands
 
 Show hidden files by adding the `-a` flag to `ls` (*a* for *all*).
 
