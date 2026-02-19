@@ -10,7 +10,7 @@
 
 **Getting Started in the tutorial environment**
 
-If you want a breakdown of Github Codespaces, [See CODESPACE-README.md](../README.md)
+If you want a breakdown of Github Codespaces, [See CODESPACE-README.md](../CODESPACE-README.md)
 
 ### Launching the Codespace means launching VS Code! (described below)
 
@@ -24,9 +24,7 @@ If you are not familiar with VS Code, see the section below to get oriented.  If
 
 ## VS Code: quick overview
 
-See VS-CODE-README.md
-
-
+[See VS-CODE-README.md](../VS-CODE-README.md)
 
 ### Background
 

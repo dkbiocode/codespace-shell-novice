@@ -1,3 +1,5 @@
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 01-introduction.md"              -->
 # Where to start
 
 Use this document as a how-to on getting started with Github and Codespaces. 

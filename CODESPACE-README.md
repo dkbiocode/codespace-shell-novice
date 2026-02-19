@@ -1,16 +1,18 @@
 # Getting Started in the tutorial environment
 
+Follow these instructions to open the training material in a GitHub Codespace.
+
 ## Github: register and find the repository
 
 1. Make sure you have an account [on Github.com](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github#signing-up-for-a-new-personal-account). You will have to verify your email.
 2. Next, navigate to this lesson repository: [codespace-shell-novice](https://github.com/dkbiocode/codespace-shell-novice) and find the green button that says <b><> Code</b>.
 
-![green button screenshot](lessons/img/github_green_button_screenshot.png)
+<img src="lessons/img/github_green_button_screenshot.png" alt="screenshot of Github Green Button" width="500"/>
 
 3. Click on that button for the pulldown box. If you are logged in, you will see a "Codespaces" tab.
 4. Find <b>shell-novice-image</b> and click.
 
-<img src="lessons/img/codespace_pulldown_screenshot.png" width="500" />
+<img src="lessons/img/codespace_pulldown_screenshot.png" width="500" alt="zoom-in on Green Button with pulldown"/>
 
 Once you click, it will take a minute or so to get started up, so sit back and watch!
 
