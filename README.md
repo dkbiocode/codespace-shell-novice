@@ -1,4 +1,12 @@
-# Using Codespaces for this Lesson
+<!-- If you are in VS-Code, do Shift-Ctrl/Command-V to view rendered text and links -->
+<!-- This will open an editor tab labeled "Preview 01-introduction.md"              -->
+# Where to start
+
+Use this document as a how-to on getting started with Github and Codespaces. 
+
+Instructional material is in the "lessons" folder. See this [Table Of Contents](lessons/README.md) to begin.
+
+# Using Codespaces for this Training
 
 This repository runs a lightweight Linux server in The Cloud, using your web browser as an interface. You will use VS Code, which includes a terminal, file browser, editor, and other useful tools.
 

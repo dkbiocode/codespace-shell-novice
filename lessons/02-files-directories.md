@@ -22,7 +22,7 @@ Several commands are frequently used to create, inspect, rename, and delete file
 
 ---
 
-### Getting started
+## Getting started
 
 To begin exploring file and directory commands, open the **TERMINAL** pane.
 
@@ -53,7 +53,8 @@ Make sure **TERMINAL** is underlined. You can click other tabs (PROBLEMS, OUTPUT
 
 ![clear prompt and cursor screenshot](img/prompt-cursor-screenshot.png)
 
-**Breakdown of your terminal prompt:**
+### Breakdown of your terminal prompt:
+
 1. The circle is a VS Code UI element — **ignore it**.
 2. The `$` is the prompt marker. Your typing appears to its right.
 3. The dark rectangle is the **cursor**, indicating where text will be inserted.
@@ -115,7 +116,7 @@ Similarly,
 we know that `/workspaces` is stored inside the root directory `/`
 because its name begins with `/`.
 
-> ## Slashes
+> ### Slashes in paths
 >
 > Notice that there are two meanings for the `/` character.
 > When it appears at the front of a file or directory name,
@@ -175,14 +176,14 @@ shows a trailing slash on the name (such as `lessons/`).
 Any names in the output that don't have a classification symbol
 are **files** in the current working directory.
 
-## Clearing your terminal
+### Clearing your terminal
 
 If your screen gets too cluttered, you can clear your terminal using the
 `clear` command. You can still access previous commands using <kbd>↑</kbd>
 and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
 
 
-### Getting help
+## Getting help
 
 `ls` has lots of other **options**. There are two common ways to find out how
 to use a command and what options it accepts:
@@ -207,7 +208,7 @@ $ man ls
 
 We'll describe both ways next.
 
-#### The `--help` option
+### The `--help` option
 
 Most bash commands and programs that people have written to be
 run from within bash, support a `--help` option that displays more
@@ -242,7 +243,7 @@ Mandatory arguments to long options are mandatory for short options, too.
 ...        ...        ...
 ~~~
 
-## Unsupported command-line options
+#### Unsupported command-line options
 
 **Command:**
 
@@ -257,7 +258,7 @@ ls: invalid option -- 'j'
 Try 'ls --help' for more information.
 ~~~
 
-#### The `man` command
+### The `man` command
 
 The other way to learn about `ls` is to type:
 
@@ -305,8 +306,11 @@ To **quit** the `man` pages, press <kbd>q</kbd>.
 ---
 
 ## Exploring More `ls` Options
+
+### Exercises
+
 >
-> ### Challenge
+> #### Challenge
 > You can also use two options at the same time. What does the command `ls` do when used
 > with the `-l` option? What about if you use both the `-l` and the `-h` option?
 >
@@ -314,7 +318,7 @@ To **quit** the `man` pages, press <kbd>q</kbd>.
 > as file permissions and ownership), but the rest should be useful
 > nevertheless.
 >
-> ### Solution
+> #### Solution
 > The `-l` option makes `ls` use a **l**ong listing format, showing not only
 > the file/directory names but also additional information, such as the file size
 > and the time of its last modification. If you use both the `-h` option and the `-l` option,
@@ -322,9 +326,10 @@ To **quit** the `man` pages, press <kbd>q</kbd>.
 > instead of `5369`.
 > 
 
-## Listing in Reverse Chronological Order
+**Listing in Reverse Chronological Order**
+
 >
-> ### Challenge
+> #### Challenge
 > By default, `ls` lists the contents of a directory in alphabetical
 > order by name. The command `ls -t` lists items by time of last
 > change instead of alphabetically. The command `ls -r` lists the
@@ -333,7 +338,7 @@ To **quit** the `man` pages, press <kbd>q</kbd>.
 > Hint: You may need to use the `-l` option to see the
 > last changed dates.
 >
-> ### Solution
+> #### Solution
 > The most recently changed file is listed last when using `-rt`. This
 > can be very useful for finding your most recent edits or checking to
 > see if a new output file was written.
@@ -497,11 +502,26 @@ $ ls
 **Output:**
 
 ~~~
+java  nvm
 ~~~
 
-‼️ **Is it blank? That's OK!** Normally, a new account on Linux will have very few files here.  It will fill up as you work.
+On Codespaces, there might be a few directories, but, ‼️ **if it is blank, that's OK!** Normally, a new account on Linux will have very few files here.  It will fill up as you work.
 
 **However**, your home directory is the place for all the configuration that goes on with your shell and software you install.
+
+#### Differences between Codespaces and other computers
+
+| Platform | Login Directory              | Main place of work | 
+|----------|----------------------------- |--------------------|
+| Personal Computer     | Your home directory | Home Directory, Documents, Shared Drive   |
+| HPC Linux Server      | Your home directory | Dedicated Project and Scratch directories |
+| GitHub Codespace      | Codespace Directory | Codespace Directory |
+
+Notice that for these lessons, we start AND WORK in a different location than other real-world settings.
+
+---
+
+#### Back to the commands
 
 Show hidden files by adding the `-a` flag to `ls` (*a* for *all*).
 
@@ -522,12 +542,12 @@ $ ls -a
 
 You'll see every entry begins with a dot (`.`). These are called "hidden files". 
 
-## Exploring the Home Directory 
+### Exploring the Home Directory 
 >
-> ### Challenge
+> #### Challenge
 > What commands/arguments can you use to show whether these are files or directories?
 >
-> ### Solution
+> #### Solution
 > The `-l` option makes `ls` use a **l**ong listing format, and the `-F` option
 > makes `ls` show a guide character for directories "\". 
 > The trick is: these must be used in combination with `-a` like so:
@@ -739,7 +759,7 @@ Note that in most command line tools, multiple options can be combined
 with a single `-` and no spaces between the options; `ls -F -a` is
 equivalent to `ls -Fa`.
 
-> ## Other Hidden Files
+> ### Other Hidden Files
 >
 > In addition to the hidden directories `..` and `.`, you may also see a file
 > called `.gitignore`. This file contains a list of file types excluded from the 
@@ -799,9 +819,9 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > Run `cd -` again and you're back in `/workspaces/codespace-shell-novice/shell-lesson-data/exercise-data/creatures`
 
 
+### Exercises
 
-
-> ## Challenge: Absolute vs Relative Paths
+> #### Challenge: Absolute vs Relative Paths
 >
 > Starting from `/home/codespace/data`,
 > which of the following commands could you use to navigate to the home directory,
@@ -817,7 +837,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > 8. `cd`
 > 9. `cd ..`
 >
-> > ## Solution
+> > #### Solution
 > > 1. No: `.` stands for the current directory.
 > > 2. No: `/` stands for the root directory.
 > > 3. Yes: this is the absolute path to the home directory.
@@ -830,7 +850,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > > 9. Yes: goes up one level.
 > 
 
-> ## Challenge: Relative Path Resolution
+> #### Challenge: Relative Path Resolution
 >
 > Using the filesystem diagram below, if `pwd` displays `/data/thing`,
 > what will `ls -F ../backup` display?
@@ -846,14 +866,14 @@ directories "backup" and "thing"; "/Users/backup" contains "original",
 "/Users/thing/backup" contains "2012-12-01", "2013-01-08" and
 "2013-01-27"](img/filesystem-challenge.svg)
 >
-> > ## Solution
+> > #### Solution
 > > 1. No: there *is* a directory `backup` in `/Users`.
 > > 2. No: this is the content of `Users/thing/backup`,
 > >    but with `..`, we asked for one level further up.
 > > 3. No: see previous explanation.
 > > 4. Yes: `../backup/` refers to `/Users/backup/`.
 >
-> ## `ls` Reading Comprehension
+> #### `ls` Reading Comprehension
 >
 > Using the filesystem diagram below,
 > if `pwd` displays `/Users/backup`,
@@ -875,7 +895,7 @@ directories "backup" and "thing"; "/Users/backup" contains "original",
 > 2.  `ls -r -F`
 > 3.  `ls -r -F /Users/backup`
 >
-> > ## Solution
+> > #### Solution
 > >  1. No: `pwd` is not the name of a directory.
 > >  2. Yes: `ls` without directory argument lists files and directories
 > >     in the current directory.
@@ -951,7 +971,7 @@ dev/   lib/   media/       proc/  sbin/  usr/
 ~~~
 
 
-### Nelle's Pipeline: Organizing Files
+## Nelle's Pipeline: Organizing Files
 
 Knowing this much about files and directories,
 Nelle is ready to organize the files that the protein assay machine will create.
