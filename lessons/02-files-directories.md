@@ -305,7 +305,6 @@ To **quit** the `man` pages, press <kbd>q</kbd>.
 
 ---
 
-## Exploring More `ls` Options
 
 ### Exercises
 

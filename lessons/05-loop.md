@@ -9,6 +9,8 @@
 
 # 05  Loops
 
+## Objectives
+
 **Questions:**
 - How can I perform the same actions on many different files?
 
@@ -31,15 +33,18 @@
 
 ---
 
+## Background and Syntax
+
 **Loops** are a programming construct which allow us to repeat a command or set of commands
-for each item in a list.
-As such they are key to productivity improvements through automation.
+for each item in a list. As such, they are key to productivity improvements through automation.
 Similar to wildcards and tab completion, using loops also reduces the
 amount of typing required (and hence reduces the number of typing mistakes).
 
-Suppose we have several hundred genome data files named `basilisk.dat`, `minotaur.dat`, and
-`unicorn.dat`.
-For this example, we'll use the `exercise-data/creatures` directory which only has three
+### Example
+
+Suppose we have several hundred genome data files named *basilisk.dat*, *minotaur.dat*, and
+*unicorn.dat*.
+For this example, we'll use the *exercise-data/creatures* directory which only has three
 example files,
 but the principles can be applied to many many more files at once.
 
@@ -50,6 +55,8 @@ Let's look at the files:
 ```
 $ head -n 5 basilisk.dat minotaur.dat unicorn.dat
 ```
+
+### Syntax
 
 We would like to print out the classification for each species, which is given on the second
 line of each file.
@@ -83,8 +90,9 @@ unicorn.dat
 CLASSIFICATION: equus monoceros
 ```
 
+## Loops in the prompt
 
-> ## Follow the Prompt
+> ### Follow the Prompt
 >
 > The shell prompt changes from `$` to `>` and back again as we were
 > typing in our loop. The second prompt, `>`, is different to remind
@@ -102,27 +110,29 @@ The `$` tells the shell interpreter to treat
 the variable as a variable name and substitute its value in its place,
 rather than treat it as text or an external command.
 
-In this example, the list is three filenames: `basilisk.dat`, `minotaur.dat`, and `unicorn.dat`.
+In this example, the list is three filenames: *basilisk.dat*, *minotaur.dat*, and *unicorn.dat*.
 Each time the loop iterates, we first use `echo` to print the value that the variable
 `$filename` currently holds. This is not necessary for the result, but beneficial for us here to
 have an easier time to follow along.
+
 Next, we will assign a file name to the variable `filename`
 and run the `head` command.
 The first time through the loop,
-`$filename` is `basilisk.dat`.
-The interpreter runs the command `head` on `basilisk.dat`
+`$filename` is basilisk.dat.
+
+The interpreter runs the command `head` on basilisk.dat
 and pipes the first two lines to the `tail` command,
-which then prints the second line of `basilisk.dat`.
+which then prints the second line of basilisk.dat.
 For the second iteration, `$filename` becomes
-`minotaur.dat`. This time, the shell runs `head` on `minotaur.dat`
+minotaur.dat. This time, the shell runs `head` on minotaur.dat
 and pipes the first two lines to the `tail` command,
-which then prints the second line of `minotaur.dat`.
+which then prints the second line of minotaur.dat.
 For the third iteration, `$filename` becomes
-`unicorn.dat`, so the shell runs the `head` command on that file,
+unicorn.dat, so the shell runs the `head` command on that file,
 and `tail` on the output of that.
 Since the list was only three items, the shell exits the `for` loop.
 
-> ## Same Symbols, Different Meanings
+> ### Same Symbols, Different Meanings
 >
 > Here we see `>` being used as a shell prompt, whereas `>` is also
 > used to redirect output.
@@ -174,7 +184,7 @@ writing the code and the person reading it.
 Note also that loops can be used for other things than filenames, like a list of numbers
 or a subset of data.
 
-> ## Write your own loop
+## Write your own loop
 >
 > How would you write a loop that echoes all 10 numbers from 0 to 9?
 >
@@ -200,8 +210,6 @@ or a subset of data.
 > > 8
 > > 9
 > > ```
-> > {: .output}
-> {: .solution}
 
 > ## Variables in Loops
 >
@@ -211,7 +219,6 @@ or a subset of data.
 > ~~~
 > cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 > ~~~
-> {: .output}
 >
 > What is the output of the following code?
 >
@@ -231,7 +238,6 @@ or a subset of data.
 > >     ls $datafile
 > > done
 > ~~~
-> {: .language-bash}
 >
 > Why do these two loops give different outputs?
 >
@@ -248,7 +254,6 @@ or a subset of data.
 > > >     ls cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 > > > done
 > > ```
-> > {: .language-bash}
 > >
 > > ```
 > > cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
@@ -258,7 +263,6 @@ or a subset of data.
 > > cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 > > cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 > > ```
-> > {: .output}
 > >
 > > The second code block lists a different file on each loop iteration.
 > > The value of the `datafile` variable is evaluated using `$datafile`,
@@ -272,8 +276,6 @@ or a subset of data.
 > > pentane.pdb
 > > propane.pdb
 > > ```
-> > {: .output}
-> {: .solution}
 
 > ## Limiting Sets of Files
 >
@@ -286,7 +288,6 @@ or a subset of data.
 > >     ls $filename
 > > done
 > ~~~
-> {: .language-bash}
 >
 > 1.  No files are listed.
 > 2.  All files are listed.
@@ -296,7 +297,6 @@ or a subset of data.
 > > ## Solution
 > > 4 is the correct answer. `*` matches zero or more characters, so any file name starting with
 > > the letter c, followed by zero or more other characters will be matched.
-> {: .solution}
 >
 > How would the output differ from using this command instead?
 >
@@ -306,7 +306,6 @@ or a subset of data.
 > >     ls $filename
 > > done
 > ~~~
-> {: .language-bash}
 >
 > 1.  The same files would be listed.
 > 2.  All the files are listed this time.
@@ -317,11 +316,10 @@ or a subset of data.
 > > ## Solution
 > > 4 is the correct answer. `*` matches zero or more characters, so a file name with zero or more
 > > characters before a letter c and zero or more characters after the letter c will be matched.
-> {: .solution}
 
 > ## Saving to a File in a Loop - Part One
 >
-> In the `shell-lesson-data/exercise-data/alkanes` directory, what is the effect of this loop?
+> In the *shell-lesson-data/exercise-data/alkanes* directory, what is the effect of this loop?
 >
 > ~~~
 > for alkanes in *.pdb
@@ -330,7 +328,6 @@ or a subset of data.
 >     cat $alkanes > alkanes.pdb
 > done
 > ~~~
-> {: .language-bash}
 >
 > 1.  Prints `cubane.pdb`, `ethane.pdb`, `methane.pdb`, `octane.pdb`, `pentane.pdb` and
 >    `propane.pdb`, and the text from `propane.pdb` will be saved to a file called `alkanes.pdb`.
@@ -345,7 +342,6 @@ or a subset of data.
 > > However, the file gets overwritten on each loop iteration, so the final content of
 > > `alkanes.pdb`
 > > is the text from the `propane.pdb` file.
-> {: .solution}
 
 > ## Saving to a File in a Loop - Part Two
 >
@@ -358,7 +354,6 @@ or a subset of data.
 >     cat $datafile >> all.pdb
 > done
 > ~~~
-> {: .language-bash}
 >
 > 1.  All of the text from `cubane.pdb`, `ethane.pdb`, `methane.pdb`, `octane.pdb`, and
 >     `pentane.pdb` would be concatenated and saved to a file called `all.pdb`.
@@ -372,7 +367,6 @@ or a subset of data.
 > > 3 is the correct answer. `>>` appends to a file, rather than overwriting it with the redirected
 > > output from a command.
 > > Given the output from the `cat` command has been redirected, nothing is printed to the screen.
-> {: .solution}
 
 Let's continue with our example in the `shell-lesson-data/exercise-data/creatures` directory.
 Here's a slightly more complicated loop:
@@ -434,7 +428,6 @@ from whatever file is being processed
 > red dragon.dat
 > purple unicorn.dat
 > ~~~
-> {: .source}
 >
 > To loop over these files, we would need to add double quotes like so:
 >
@@ -444,7 +437,6 @@ from whatever file is being processed
 > >     head -n 100 "$filename" | tail -n 20
 > > done
 > ~~~
-> {: .language-bash}
 >
 > It is simpler to avoid using spaces (or other special characters) in filenames.
 >
@@ -456,7 +448,6 @@ from whatever file is being processed
 > head: cannot open ‘red dragon.dat’ for reading: No such file or directory
 > head: cannot open ‘purple unicorn.dat’ for reading: No such file or directory
 > ~~~
-> {: .error}
 >
 > Try removing the quotes around `$filename` in the loop above to see the effect of the quote
 > marks on spaces. Note that we get a result from the loop command for unicorn.dat
@@ -471,7 +462,6 @@ from whatever file is being processed
 > CAAGTGTTCC
 > ...
 > ~~~
-> {: .output}
 
 We would like to modify each of the files in `shell-lesson-data/exercise-data/creatures`, 
 but also save a version of the original files. We want to copy the original files to new
@@ -536,14 +526,15 @@ The following diagram
 shows what happens when the modified loop is executed and demonstrates how the
 judicious use of `echo` is a good debugging technique.
 
-![The for loop "for filename in *.dat; do echo cp $filename original-$filename;
+![graphic for loop](../fig/shell_script_for_loop_flow_chart.svg)
+The for loop "for filename in *.dat; do echo cp $filename original-$filename;
 done" will successively assign the names of all "*.dat" files in your current
 directory to the variable "$filename" and then execute the command. With the
 files "basilisk.dat", "minotaur.dat" and "unicorn.dat" in the current directory
 the loop will successively call the echo command three times and print three
 lines: "cp basislisk.dat original-basilisk.dat", then "cp minotaur.dat
 original-minotaur.dat" and finally "cp unicorn.dat
-original-unicorn.dat"](../fig/shell_script_for_loop_flow_chart.svg)
+original-unicorn.dat"
 
 ## Nelle's Pipeline: Processing Files
 
@@ -671,7 +662,6 @@ so she decides to get some coffee and catch up on her reading.
 > ~~~
 > $ history | tail -n 5
 > ~~~
-> {: .language-bash}
 > ~~~
 > 456  for datafile in NENE*A.txt NENE*B.txt; do   echo $datafile stats-$datafile; done
 > 457  for datafile in NENE*A.txt NENE*B.txt; do echo $datafile stats-$datafile; done
@@ -680,7 +670,6 @@ so she decides to get some coffee and catch up on her reading.
 > stats-$datafile; done
 > 460  history | tail -n 5
 > ~~~
-> {: .output}
 >
 > then she can re-run `goostats.sh` on the files simply by typing
 > `!459`.
@@ -717,7 +706,6 @@ so she decides to get some coffee and catch up on her reading.
 > >     cat $datafile >> all.pdb
 > > done
 > ~~~
-> {: .language-bash}
 >
 > What is the difference between the two loops below, and which one would we
 > want to run?
@@ -729,7 +717,6 @@ so she decides to get some coffee and catch up on her reading.
 > >     echo cat $datafile >> all.pdb
 > > done
 > ~~~
-> {: .language-bash}
 >
 > ~~~
 > # Version 2
@@ -738,7 +725,6 @@ so she decides to get some coffee and catch up on her reading.
 > >     echo "cat $datafile >> all.pdb"
 > > done
 > ~~~
-> {: .language-bash}
 >
 > > ## Solution
 > > The second version is the one we want to run.
@@ -754,7 +740,6 @@ so she decides to get some coffee and catch up on her reading.
 > >
 > > Try both versions for yourself to see the output! Be sure to open the
 > > `all.pdb` file to view its contents.
-> {: .solution}
 
 > ## Nested Loops
 >
@@ -780,7 +765,6 @@ so she decides to get some coffee and catch up on her reading.
 > > temperatures, and creates a new directory for each combination.
 > >
 > > Try running the code for yourself to see which directories are created!
-> {: .solution}
 
 ---
 

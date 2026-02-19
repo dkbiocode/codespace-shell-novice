@@ -424,7 +424,7 @@ output of the "wc" command is the input to the "sort" command, the output of
 the "sort" command is the input to the "head" command and the output of the
 "head" command is directed to the shell](../fig/redirects-and-pipes.svg)
 
-> ## Piping Commands Together
+> ### Piping Commands Together
 >
 > In our current directory, we want to find the 3 files which have the least number of
 > lines. Which command listed below would work?
@@ -434,7 +434,7 @@ the "sort" command is the input to the "head" command and the output of the
 > 3. `wc -l * | head -n 3 | sort -n`
 > 4. `wc -l * | sort -n | head -n 3`
 >
-> > ## Solution
+> > #### Solution
 > > Option 4 is the solution.
 > > The pipe character `|` is used to connect the output from one command to
 > > the input of another.
@@ -443,7 +443,7 @@ the "sort" command is the input to the "head" command and the output of the
 > {: .solution}
 
 
-## Tools designed to work together
+### Tools designed to work together
 This idea of linking programs together is why Unix has been so successful.
 Instead of creating enormous programs that try to do many different things,
 Unix programmers focus on creating lots of simple tools that each do one job well,

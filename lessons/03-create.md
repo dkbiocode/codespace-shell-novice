@@ -302,7 +302,9 @@ draft.txt
 > explorer program,the music player will automatically (and erroneously)
 > attempt to open the `whale.mp3` file.
 
-## Moving files and directories
+## Moving, Copying and Removing 
+
+### Moving files and directories
 Returning to the `shell-lesson-data/exercise-data/writing` directory,
 
 ```
@@ -389,7 +391,10 @@ $ ls quotes.txt
 quotes.txt
 ~~~
 
-> ## Moving Files to a new folder
+### Moving Files to a new folder
+
+>
+> #### Challenge
 >
 > After running the following commands,
 > Jamie realizes that she put the files `sucrose.dat` and `maltose.dat` into the wrong folder.
@@ -411,7 +416,7 @@ quotes.txt
 > $ mv sucrose.dat maltose.dat ____/____
 > ~~~
 > 
-> > ## Solution
+> > #### Solution
 > > ```
 > > $ mv sucrose.dat maltose.dat ../raw
 > > ```
@@ -420,7 +425,7 @@ quotes.txt
 > > and that `.` refers to the current directory.
 > 
 
-## Copying files and directories
+### Copying files and directories
 
 The `cp` command works very much like `mv`,
 except it copies a file instead of moving it.
@@ -460,8 +465,9 @@ quotations.txt
 ```
 
 
-> ## Renaming Files
->
+### Renaming Files
+
+> > #### Challenge
 > Suppose that you created a plain-text file in your current directory to contain a list of the
 > statistical tests you will need to do to analyze your data, and named it `statstics.txt`
 >
@@ -473,7 +479,7 @@ quotations.txt
 > 3. `mv statstics.txt .`
 > 4. `cp statstics.txt .`
 >
-> > ## Solution
+> > #### Solution
 > > 1. No.  While this would create a file with the correct name,
 > > the incorrectly named file still exists in the directory
 > > and would need to be deleted.
@@ -488,8 +494,9 @@ quotations.txt
 
 
 
-> ## Moving and Copying
->
+### Moving and Copying - exercises
+
+> #### Challenge
 > What is the output of the closing `ls` command in the sequence shown below?
 >
 > ~~~
@@ -522,7 +529,7 @@ quotations.txt
 > 3.   `proteins.dat recombined`
 > 4.   `proteins-saved.dat`
 >
-> > ## Solution
+> > #### Solution
 > > We start in the `/Users/jamie/data` directory, and create a new folder called `recombined`.
 > > The second line moves (`mv`) the file `proteins.dat` to the new folder (`recombined`).
 > > The third line makes a copy of the file we just moved.
@@ -538,7 +545,7 @@ quotations.txt
 > > 4. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
 >
 
-## Removing files and directories
+### Removing files and directories
 
 Returning to the `shell-lesson-data/exercise-data/writing` directory,
 let's tidy up this directory by removing the `quotes.txt` file we created.
@@ -558,8 +565,8 @@ $ ls quotes.txt
 ls: cannot access 'quotes.txt': No such file or directory
 ```
 
-> ## Deleting Is Forever
->
+### Deleting Is Forever
+
 > The Unix shell doesn't have a trash bin that we can recover deleted
 > files from (though most graphical interfaces to Unix do).  Instead,
 > when we delete files, they are unlinked from the file system so that
@@ -569,12 +576,12 @@ ls: cannot access 'quotes.txt': No such file or directory
 > file's disk space right away.
 
 
-> ## Using `rm` Safely
+> #### Using `rm` Safely
 >
 > What happens when we execute `rm -i thesis_backup/quotations.txt`?
 > Why would we want this protection when using `rm`?
 >
-> > ## Solution
+> > #### Solution
 > > ```
 > > rm: remove regular file 'thesis_backup/quotations.txt'? y
 > > ```
@@ -619,8 +626,8 @@ or specifying a naming pattern using wildcards. Wildcards are
 special characters that can be used to represent unknown characters
 or sets of characters when navigating the Unix file system.
 
-> ## Copy with Multiple Filenames
->
+> ### Copy with Multiple Filenames
+> #### Challenge
 > For this exercise, you can test the commands in the `shell-lesson-data/exercise-data` directory.
 >
 > In the example below, what does `cp` do when given several filenames and a directory name?
@@ -643,7 +650,7 @@ or sets of characters when navigating the Unix file system.
 > $ cp minotaur.dat unicorn.dat basilisk.dat
 > ~~~
 >
-> > ## Solution
+> > #### Solution
 > > If given more than one file name followed by a directory name
 > > (i.e. the destination directory must be the last argument),
 > > `cp` copies the files to the named directory.
@@ -687,8 +694,8 @@ or sets of characters when navigating the Unix file system.
 > themselves. It is the shell, not the other programs, that expands
 > the wildcards.
 
-> ## List filenames matching a pattern
->
+> ### List filenames matching a pattern
+> #### Challenge
 > When run in the `alkanes` directory, which `ls` command(s) will
 > produce this output?
 >
@@ -699,7 +706,7 @@ or sets of characters when navigating the Unix file system.
 > 3. `ls *t??ne.pdb`
 > 4. `ls ethane.*`
 >
-> > ## Solution
+> > #### Solution
 >>  The solution is `3.`
 >>
 >> `1.` shows all files whose names contain zero or more characters (`*`)
