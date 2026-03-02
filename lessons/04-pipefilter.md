@@ -109,7 +109,6 @@ only the number of characters or the number of words, respectively.
 > ~~~
 > $ wc -l
 > ~~~
-> {: .language-bash}
 >
 > but don't type `*.pdb` (or anything else) after the command?
 > Since it doesn't have any filenames, `wc` assumes it is supposed to
@@ -196,7 +195,6 @@ But first we'll do an exercise to learn a little about the sort command:
 > 22
 > 6
 > ~~~
-> {: .source}
 >
 > If we run `sort` on this file, the output is:
 >
@@ -207,7 +205,6 @@ But first we'll do an exercise to learn a little about the sort command:
 > 22
 > 6
 > ~~~
-> {: .output}
 >
 > If we run `sort -n` on the same file, we get this instead:
 >
@@ -218,13 +215,11 @@ But first we'll do an exercise to learn a little about the sort command:
 > 19
 > 22
 > ~~~
-> {: .output}
 >
 > Explain why `-n` has this effect.
 >
 > > ## Solution
 > > The `-n` option specifies a numerical rather than an alphanumerical sort.
-> {: .solution}
 
 We will also use the `-n` option to specify that the sort is
 numerical instead of alphanumerical.
@@ -277,7 +272,6 @@ the output of `head` must be the file with the fewest lines.
 > ~~~
 > $ sort -n lengths.txt > lengths.txt
 > ~~~
-> {: .language-bash}
 >
 > Doing something like this may give you
 > incorrect results and/or delete
@@ -293,25 +287,21 @@ the output of `head` must be the file with the fewest lines.
 > ~~~
 > $ echo The echo command prints text
 > ~~~
-> {: .language-bash}
 > ~~~
 > The echo command prints text
 > ~~~
-> {: .output}
 >
 > Now test the commands below to reveal the difference between the two operators:
 >
 > ~~~
 > $ echo hello > testfile01.txt
 > ~~~
-> {: .language-bash}
 >
 > and:
 >
 > ~~~
 > $ echo hello >> testfile02.txt
 > ~~~
-> {: .language-bash}
 >
 > Hint: Try executing each command twice in a row and then examining the output files.
 >
@@ -323,7 +313,6 @@ the output of `head` must be the file with the fewest lines.
 > > (in this case`testfile02.txt`),
 > > but appends the string to the file if it already exists
 > > (i.e. when we run it for the second time).
-> {: .solution}
 
 > ## Appending Data
 >
@@ -338,7 +327,6 @@ the output of `head` must be the file with the fewest lines.
 > $ head -n 3 animals.csv > animals-subset.csv
 > $ tail -n 2 animals.csv >> animals-subset.csv
 > ~~~
-> {: .language-bash}
 >
 > 1. The first three lines of `animals.csv`
 > 2. The last two lines of `animals.csv`
@@ -351,7 +339,6 @@ the output of `head` must be the file with the fewest lines.
 > > For option 2 to be correct we would only run the `tail` command.
 > > For option 4 to be correct we would have to pipe the output of `head` into `tail -n 2`
 > >  by doing `head -n 3 animals.csv | tail -n 2 > animals-subset.csv`
-> {: .solution}
 
 
 ## Passing output to another command
@@ -424,7 +411,7 @@ output of the "wc" command is the input to the "sort" command, the output of
 the "sort" command is the input to the "head" command and the output of the
 "head" command is directed to the shell](../fig/redirects-and-pipes.svg)
 
-> ### Piping Commands Together
+> ## Piping Commands Together
 >
 > In our current directory, we want to find the 3 files which have the least number of
 > lines. Which command listed below would work?
@@ -434,16 +421,15 @@ the "sort" command is the input to the "head" command and the output of the
 > 3. `wc -l * | head -n 3 | sort -n`
 > 4. `wc -l * | sort -n | head -n 3`
 >
-> > #### Solution
+> > ## Solution
 > > Option 4 is the solution.
 > > The pipe character `|` is used to connect the output from one command to
 > > the input of another.
 > > `>` is used to redirect standard output to a file.
 > > Try it in the `shell-lesson-data/exercise-data/alkanes` directory!
-> {: .solution}
 
 
-### Tools designed to work together
+## Tools designed to work together
 This idea of linking programs together is why Unix has been so successful.
 Instead of creating enormous programs that try to do many different things,
 Unix programmers focus on creating lots of simple tools that each do one job well,
@@ -480,7 +466,6 @@ so that you and other people can put those programs into pipes to multiply their
 > 2012-11-07,rabbit,16
 > 2012-11-07,bear,1
 > ~~~
-> {: .source}
 >
 > What text passes through each of the pipes and the final redirect in the pipeline below?
 > Note, the `sort -r` command sorts in reverse order.
@@ -488,7 +473,6 @@ so that you and other people can put those programs into pipes to multiply their
 > ~~~
 > $ cat animals.csv | head -n 5 | tail -n 3 | sort -r > final.txt
 > ~~~
-> {: .language-bash}
 > Hint: build the pipeline up one command at a time to test your understanding
 > > ## Solution
 > > The `head` command extracts the first 5 lines from `animals.csv`.
@@ -502,8 +486,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > 2012-11-06,deer,2
 > > 2012-11-05,raccoon,7
 > > ```
-> > {: .source}
-> {: .solution}
 
 > ## Pipe Construction
 >
@@ -512,7 +494,6 @@ so that you and other people can put those programs into pipes to multiply their
 > ~~~
 > $ cut -d , -f 2 animals.csv
 > ~~~
-> {: .language-bash}
 >
 > The `cut` command is used to remove or 'cut out' certain sections of each line in the file,
 > and `cut` expects the lines to be separated into columns by a <kbd>Tab</kbd> character.
@@ -531,7 +512,6 @@ so that you and other people can put those programs into pipes to multiply their
 > rabbit
 > bear
 > ~~~
-> {: .output}
 >
 > The `uniq` command filters out adjacent matching lines in a file.
 > How could you extend this pipeline (using `uniq` and another command) to find
@@ -542,8 +522,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > ```
 > > $ cut -d , -f 2 animals.csv | sort | uniq
 > > ```
-> > {: .language-bash}
-> {: .solution}
 
 > ## Which Pipe?
 >
@@ -556,7 +534,6 @@ so that you and other people can put those programs into pipes to multiply their
 > 2012-11-06,rabbit,19
 > ...
 > ~~~
-> {: .output}
 >
 > The `uniq` command has a `-c` option which gives a count of the
 > number of times a line occurs in its input.  Assuming your current
@@ -575,7 +552,6 @@ so that you and other people can put those programs into pipes to multiply their
 > > If you have difficulty understanding why, try running the commands, or sub-sections of
 > > the pipelines (make sure you are in the `shell-lesson-data/exercise-data/animal-counts`
 > > directory).
-> {: .solution}
 
 ## Nelle's Pipeline: Checking Files
 
